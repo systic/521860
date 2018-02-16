@@ -1,0 +1,243 @@
+<div id="device-summary-modal-container"
+	[class.modal--visible]="modalVisible">
+	 
+	<div id="device-summary-modal-wrapper" (click)="dismissModal()">
+		<section id="device-summary-modal" (click)="$event.stopPropagation()">
+
+			<!-- DISMISS BUTTON -->
+			<button class="btn-dismiss flex--centered" (click)="dismissModal()">
+				<span class="icon-close"></span>		
+			</button>
+
+			<h3>
+				STORE HEALTH	
+			</h3>	
+
+			<div class="mobile-tables">
+				<ngx-carousel
+					[inputs]="tableCarouselOptions">
+					
+					<ngx-item NgxCarouselItem>
+						
+						<table class="table--mobile">
+							<thead>
+								<tr>
+									<th (click)="sortByDeviceName()">
+										<div class="th-wrapper">
+											<span class="col-title">
+												DEVICE NAME	
+											</span>
+											<span class="icon-triangle-down flex--centered"
+												*ngIf="lastSortedColumn !== 'device name'"
+												[class.transform--flipped]="sortAscending.deviceName === false"></span>
+											<span class="icon-triangle-down--blue flex--centered"
+												*ngIf="lastSortedColumn === 'device name'"
+												[class.transform--flipped]="sortAscending.deviceName === false"></span>
+													
+										</div>
+									</th>	
+									<th>
+										IP	
+									</th>
+									<th (click)="sortByDeviceHealth()">
+										<div class="th-wrapper">
+											<span class="col-title">
+												HEALTH				
+											</span>
+											<span class="icon-triangle-down flex--centered"
+												*ngIf="lastSortedColumn !== 'device name'"
+												[class.transform--flipped]="sortAscending.health === false"></span>
+											<span class="icon-triangle-down--blue flex--centered"
+											*ngIf="lastSortedColumn === 'device name'"
+											[class.transform--flipped]="sortAscending.health === false"></span>
+										</div>
+									</th>
+								</tr>	
+							</thead>		
+							<tbody>
+								<tr *ngFor="let summary of displayedDeviceSummaries">
+									<td>
+										<div class="td-wrapper">
+											<div class="icon-wrapper">
+												<span class="icon-router" *ngIf="summary.type === 'router'"></span>	
+												<span class="icon-pos" *ngIf="summary.type === 'pos'"></span>	
+											</div>
+
+											<span class="device-name">
+												{{ summary.name }}	
+											</span>
+										</div>	
+									</td>	
+									<td>
+										{{ summary.ip }}	
+									</td>
+									<td class="td--health">
+										<div class="td-wrapper">
+											<div class="icon-wrapper">
+												<span class="icon-perfect" *ngIf="summary.health === 'Perfect'"></span>	
+												<span class="icon-good" *ngIf="summary.health === 'Good'"></span>	
+												<span class="icon-down" *ngIf="summary.health === 'Down'"></span>	
+											</div>
+
+											<span class="device-health">
+												{{ summary.health }}	
+											</span>
+										</div>	
+									</td>
+								</tr>		
+							</tbody>
+						</table>	
+					</ngx-item>
+
+					<ngx-item NgxCarouselItem>
+						
+						<table class="table--mobile">
+							<thead>
+								<tr>
+									<th (click)="sortByDeviceName()">
+										<div class="th-wrapper">
+											<span class="col-title">
+												DEVICE NAME	
+											</span>
+											<span class="icon-triangle-down flex--centered"
+												*ngIf="lastSortedColumn !== 'device name'"
+												[class.transform--flipped]="sortAscending.deviceName === false"></span>
+											<span class="icon-triangle-down--blue flex--centered"
+												*ngIf="lastSortedColumn === 'device name'"
+												[class.transform--flipped]="sortAscending.deviceName === false"></span>
+													
+										</div>
+									</th>	
+									<th>
+										CPU	
+									</th>
+									<th>
+										MEMORY					
+									</th>
+								</tr>	
+							</thead>		
+							<tbody>
+								<tr *ngFor="let summary of displayedDeviceSummaries">
+									<td>
+										<div class="td-wrapper">
+											<div class="icon-wrapper">
+												<span class="icon-router" *ngIf="summary.type === 'router'"></span>	
+												<span class="icon-pos" *ngIf="summary.type === 'pos'"></span>	
+											</div>
+
+											<span class="device-name">
+												{{ summary.name }}	
+											</span>
+										</div>	
+									</td>	
+									<td>
+										{{ summary.cpu }}	
+									</td>
+									<td>
+										{{ summary.memory }}
+									</td>
+								</tr>		
+							</tbody>
+						</table>	
+					</ngx-item>
+
+					<button NgxCarouselPrev></button>
+					<button NgxCarouselNext></button>
+
+				</ngx-carousel>		
+			</div><!-- mobile tables -->
+
+			<div class="tablet-and-desktop-table">
+
+				<table>
+					<thead>
+						<tr>
+							<th (click)="sortByDeviceName()">
+								<div class="th-wrapper">
+									<span class="col-title">
+										DEVICE NAME	
+									</span>
+									<span class="icon-triangle-down flex--centered"
+										*ngIf="lastSortedColumn !== 'device name'"
+										[class.transform--flipped]="sortAscending.deviceName === false"></span>
+									<span class="icon-triangle-down--blue flex--centered"
+										*ngIf="lastSortedColumn === 'device name'"
+										[class.transform--flipped]="sortAscending.deviceName === false"></span>
+											
+								</div>
+							</th>	
+							<th>
+								IP	
+							</th>
+							<th (click)="sortByDeviceHealth()">
+								<div class="th-wrapper">
+									<span class="col-title">
+										HEALTH				
+									</span>
+									<span class="icon-triangle-down flex--centered"
+										*ngIf="lastSortedColumn !== 'device name'"
+										[class.transform--flipped]="sortAscending.health === false"></span>
+									<span class="icon-triangle-down--blue flex--centered"
+									*ngIf="lastSortedColumn === 'device name'"
+									[class.transform--flipped]="sortAscending.health === false"></span>
+								</div>
+							</th>
+							<th>
+								CPU	
+							</th>
+							<th>
+								MEMORY	
+							</th>
+						</tr>	
+					</thead>		
+					<tbody>
+						<tr *ngFor="let summary of displayedDeviceSummaries">
+							<td>
+								<div class="td-wrapper">
+									<div class="icon-wrapper">
+										<span class="icon-router" *ngIf="summary.type === 'router'"></span>	
+										<span class="icon-pos" *ngIf="summary.type === 'pos'"></span>	
+									</div>
+
+									<span class="device-name">
+										{{ summary.name }}	
+									</span>
+								</div>	
+							</td>	
+							<td>
+								{{ summary.ip }}	
+							</td>
+							<td class="td--health">
+								<div class="td-wrapper">
+									<div class="icon-wrapper">
+										<span class="icon-perfect" *ngIf="summary.health === 'Perfect'"></span>	
+										<span class="icon-good" *ngIf="summary.health === 'Good'"></span>	
+										<span class="icon-down" *ngIf="summary.health === 'Down'"></span>	
+									</div>
+
+									<span class="device-health">
+										{{ summary.health }}	
+									</span>
+								</div>	
+							</td>
+							<td>
+								{{ summary.cpu }}	
+							</td>
+							<td>
+								{{ summary.memory }}	
+							</td>
+						</tr>		
+					</tbody>
+				</table>	
+					
+			</div><!-- tablet and desktop table -->
+
+			<div class="paginator-wrapper">
+				<app-paginator
+					[numPages]="numPages"
+					[currentPage]="currentPage"
+					(paged)="onNewPage($event)"></app-paginator>	
+			</div>
+		</section>
+	</div>	
+</div>

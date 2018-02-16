@@ -1,0 +1,1081 @@
+{
+	"hourlyStoreStatuses": [
+		{
+			"time": "00:00",
+			"percentActive": 66
+		},
+		{
+			"time": "01:00",
+			"percentActive": 70
+		},
+		{
+			"time": "02:00",
+			"percentActive": 90
+		},
+		{
+			"time": "03:00",
+			"percentActive": 50
+		},
+		{
+			"time": "04:00",
+			"percentActive": 100
+		},
+		{
+			"time": "05:00",
+			"percentActive": 80
+		},
+		{
+			"time": "06:00",
+			"percentActive": 75
+		},
+		{
+			"time": "07:00",
+			"percentActive": 66
+		},
+		{
+			"time": "08:00",
+			"percentActive": 70
+		},
+		{
+			"time": "09:00",
+			"percentActive": 90
+		},
+		{
+			"time": "10:00",
+			"percentActive": 50
+		},
+		{
+			"time": "11:00",
+			"percentActive": 100
+		},
+		{
+			"time": "12:00",
+			"percentActive": 80
+		},
+		{
+			"time": "13:00",
+			"percentActive": 75
+		},
+		{
+			"time": "14:00",
+			"percentActive": 66
+		},
+		{
+			"time": "15:00",
+			"percentActive": 70
+		},
+		{
+			"time": "16:00",
+			"percentActive": 90
+		},
+		{
+			"time": "17:00",
+			"percentActive": 50
+		},
+		{
+			"time": "18:00",
+			"percentActive": 100
+		},
+		{
+			"time": "19:00",
+			"percentActive": 80
+		},
+		{
+			"time": "20:00",
+			"percentActive": 75
+		},
+		{
+			"time": "21:00",
+			"percentActive": 66
+		},
+		{
+			"time": "22:00",
+			"percentActive": 70
+		},
+		{
+			"time": "23:00",
+			"percentActive": 90
+		}
+	],
+	"stores": [
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "Canada",
+			"coordinates": {
+				"lat": 62.727903,
+				"lng": -120.085316
+			},
+			"posAisles": {
+				"count": 4,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "Canada",
+			"coordinates": {
+				"lat": 58.554897,
+				"lng": -107.780629
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "Canada",
+			"coordinates": {
+				"lat": 51.853895,
+				"lng": -118.327504
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "Canada",
+			"coordinates": {
+				"lat": 49.401461,
+				"lng": -102.858754
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "Canada",
+			"coordinates": {
+				"lat": 50.532072,
+				"lng": -95.388051
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "Canada",
+			"coordinates": {
+				"lat": 48.826174,
+				"lng": -83.083363
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "Canada",
+			"coordinates": {
+				"lat": 55.095152,
+				"lng": -77.634144
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+
+
+
+		{
+			"name": "Store Name",
+			"status": "issue",
+			"region": "North America",
+			"country": "Canada",
+			"coordinates": {
+				"lat": 57.247373,
+				"lng": -115.163441
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+		{
+			"name": "Store Name",
+			"status": "issue",
+			"region": "North America",
+			"country": "Canada",
+			"coordinates": {
+				"lat": 51.74519,
+				"lng": -113.141957
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+		{
+			"name": "Store Name",
+			"status": "issue",
+			"region": "North America",
+			"country": "Canada",
+			"coordinates": {
+				"lat": 53.921612,
+				"lng": -66.296254
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+
+
+
+
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "United States",
+			"coordinates": {
+				"lat": 41.200723,
+				"lng": -118.415394
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "United States",
+			"coordinates": {
+				"lat": 37.3236,
+				"lng": -105.14391
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "United States",
+			"coordinates": {
+				"lat": 30.851961,
+				"lng": -104.001332
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "United States",
+			"coordinates": {
+				"lat": 36.197027,
+				"lng": -93.454457
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "United States",
+			"coordinates": {
+				"lat": 30.473953,
+				"lng": -93.102894
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "United States",
+			"coordinates": {
+				"lat": 32.571531,
+				"lng": -88.093129
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "United States",
+			"coordinates": {
+				"lat": 42.57468,
+				"lng": -77.370473
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+
+
+		{
+			"name": "Store Name",
+			"status": "issue",
+			"region": "North America",
+			"country": "United States",
+			"coordinates": {
+				"lat": 43.537952,
+				"lng": -102.419301
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+		{
+			"name": "Store Name",
+			"status": "issue",
+			"region": "North America",
+			"country": "United States",
+			"coordinates": {
+				"lat": 36.197027,
+				"lng": -117.360707
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+		{
+			"name": "Store Name",
+			"status": "issue",
+			"region": "North America",
+			"country": "United States",
+			"coordinates": {
+				"lat": 35.899498,
+				"lng": -82.100137
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+
+
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "Mexico",
+			"coordinates": {
+				"lat": 26.83558,
+				"lng": -114.092324
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "Mexico",
+			"coordinates": {
+				"lat": 20.891393,
+				"lng": -103.63334
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "Mexico",
+			"coordinates": {
+				"lat": 16.395764,
+				"lng": -99.238808
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+
+
+
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "Cuba",
+			"coordinates": {
+				"lat": 21.955008,
+				"lng": -79.287637
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+
+
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "Guatemala",
+			"coordinates": {
+				"lat": 15.40503,
+				"lng": -91.28470
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		},
+
+		{
+			"name": "Store Name",
+			"status": "active",
+			"region": "North America",
+			"country": "Honduras",
+			"coordinates": {
+				"lat": 15.235495,
+				"lng": -85.659707
+			},
+			"posAisles": {
+				"count": 20,
+				"numPerfect": 2,
+				"numGood": 1,
+				"numDown": 1
+			},
+			"storePerformance": {
+				"salesNum": "$125,150",
+				"performancePeriods": [
+					{
+						"time": "10:00AM",
+						"amount": "$125,125"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,100"
+					},
+					{
+						"time": "10:00AM",
+						"amount": "$125,000"
+					}
+				]
+			},
+			"networkPerformance": {
+				"total": 20,
+				"numConnected": 15
+			}
+		}
+	]
+}

@@ -1,0 +1,392 @@
+[
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID265874",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH2",
+		"storeName": "4Name of the Store",
+		"type": "pos",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 13",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH1",
+		"storeName": "Name of the Store",
+		"type": "pos",
+		"status": "active",
+		"id": "#ID265877",
+		"ip": "10.165.35.625",
+		"os": "Windos 11",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "6Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID265871",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID265874",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH6",
+		"storeName": "8Name of the Store",
+		"type": "pos",
+		"status": "active",
+		"id": "#ID265870",
+		"ip": "10.165.36.625",
+		"os": "Windos 11",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "pos",
+		"status": "active",
+		"id": "#ID265877",
+		"ip": "10.165.35.625",
+		"os": "Windos 13",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH9",
+		"storeName": "9Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH4",
+		"storeName": "Name of the Store",
+		"type": "pos",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 11",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH4",
+		"storeName": "2Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID265880",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID265874",
+		"ip": "10.165.35.625",
+		"os": "Windos 12",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH0",
+		"storeName": "Name of the Store",
+		"type": "pos",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 11",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "0Name of the Store",
+		"type": "pos",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 13",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID265879",
+		"ip": "10.165.35.625",
+		"os": "Windos 13",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 13",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "pos",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "pos",
+		"status": "active",
+		"id": "#ID265874",
+		"ip": "10.165.35.625",
+		"os": "Windos 12",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 11",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "pos",
+		"status": "active",
+		"id": "#ID265878",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID265874",
+		"ip": "10.165.35.625",
+		"os": "Windos 12",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "pos",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "pos",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "pos",
+		"status": "active",
+		"id": "#ID265872",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 12",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "pos",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 11",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "pos",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "pos",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 13",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID265873",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID265874",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "pos",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "pos",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID265877",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	},
+	{
+		"name": "Device 023584GH",
+		"storeName": "Name of the Store",
+		"type": "router",
+		"status": "active",
+		"id": "#ID0265875",
+		"ip": "10.165.35.625",
+		"os": "Windos 10",
+		"description": "This store is lorem ipsum dolor sitamet."
+	}
+]

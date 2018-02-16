@@ -1,0 +1,69 @@
+<header>
+
+	<!-- PRIMARY ( LEFT ) CONTENT -->
+	<div class="header__primary">
+		<!-- MENU BUTTON ( mobile and tablet ) -->
+		<button class="btn-menu flex--centered"
+			(click)="toggleNavMenuVisibility()">
+			<span class="icon-menu"></span>		
+		</button>	
+
+		<img src="/assets/img/Wipro-logo.png" alt="logo" />
+		<h2 class="page-title">
+			{{ pageTitle }}		
+		</h2>
+		<h2 class="placeholder">
+			{{ companyPlaceholderName }}	
+		</h2>
+	</div>
+
+	<!-- PAGE NAVIGATION -->
+	<nav>
+		<a class="nav-item" routerLink="/dashboard" routerLinkActive="nav-item--active">
+
+			<span class="icon-dashboard--blue icon--active"></span>	
+			<span class="link-title">
+				Dashboard	
+			</span>
+		</a>			
+		<a class="nav-item" routerLink="/device-management" routerLinkActive="nav-item--active">
+
+			<span class="icon-device-management icon--inactive"></span>	
+			<span class="link-title">
+				Device Management
+			</span>
+		</a>			
+		<a class="nav-item" routerLink="/user-management" routerLinkActive="nav-item--active">
+
+			<span class="icon-user-management icon--inactive"></span>	
+			<span class="link-title">
+				User Management	
+			</span>
+		</a>			
+	</nav>
+
+	<!-- SECONDARY ( RIGHT ) CONTENT -->
+	<div class="header__secondary">
+		<div class="user-section">
+			<label>
+				Welcome,	
+			</label>	
+			<p>
+				{{ userFullName }}	
+			</p>
+		</div>	
+
+		<!-- Notifications -->
+		<div class="notification-section flex--centered">
+			<div class="notification-btn-wrapper flex--centered">
+				<button class="btn-notification flex--centered">
+					<span class="icon-notification"></span>
+
+					<span class="notification-count-indicator flex--centered">
+						{{ numNotifications }}							
+					</span>
+				</button>	
+			</div>
+		</div>
+	</div>
+</header>

@@ -1,0 +1,59 @@
+<aside id="navigation-menu">
+
+	<!-- Heading -->
+	<div class="menu-heading">
+		<button class="btn-dismiss flex--centered"
+			(click)="dismissNavMenu()">
+			<span class="icon-ex"></span>	
+		</button>	
+
+		<img src="/assets/img/Wipro-logo.png" alt="logo" />
+
+		<h2>
+			{{ companyPlaceholder }}		
+		</h2>
+	</div>
+
+	<nav>
+		<a class="nav-item"
+     			(click)="dismissNavMenu()"
+			routerLink="/dashboard" routerLinkActive="nav-item--active">
+			<span class="icon-container flex--centered">
+				<span class="icon-dashboard--blue--large"></span>	
+			</span>
+			<span class="link-title">
+				Dashboard	
+			</span>
+		</a>			
+		<a class="nav-item"
+     			(click)="dismissNavMenu()"
+			routerLink="/device-management" routerLinkActive="nav-item--active">
+			<span class="icon-container flex--centered">
+				<span class="icon-device-management--large icon--inactive"></span>	
+			</span>
+			<span class="link-title">
+				Device Management
+			</span>
+		</a>			
+		<a class="nav-item"
+     			(click)="dismissNavMenu()"
+			routerLink="/user-management" routerLinkActive="nav-item--active">
+			<span class="icon-container flex--centered">
+				<span class="icon-user-management--large icon--inactive"></span>	
+			</span>
+			<span class="link-title">
+				User Management
+			</span>
+		</a>			
+		<a class="nav-item"
+     			(click)="dismissNavMenu()"
+			routerLink="/login" routerLinkActive="nav-item--active">
+			<span class="icon-container flex--centered">
+				<span class="icon-sign-out--large icon--inactive"></span>	
+			</span>
+			<span class="link-title">
+				Sign Out
+			</span>
+		</a>			
+	</nav>
+</aside>

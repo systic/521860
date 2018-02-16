@@ -1,0 +1,70 @@
+<div class="add-device-form-container"
+	[class.form--visible]="formVisible"
+	(click)="dismissForm()">
+
+	<div class="add-device-form" (click)="$event.stopPropagation()">
+		<section class="form-heading">
+			<h6>
+				+ ADD A NEW DEVICE	
+			</h6>	
+			<button class="btn-dismiss flex--centered"
+				(click)="dismissForm()">
+				<span class="icon-close--light"></span>	
+			</button>
+		</section>
+		<form (ngSubmit)="onFormSubmit()">
+			<div class="input-item">
+				<label>
+					Device Name	
+				</label>	
+				<input type="text" placeholder="Enter device name" />
+			</div>	
+			<div class="input-item input-item--select">
+				<label>
+					Devicy Type	
+				</label>	
+				<app-select-control
+					prompt="Select Device Type"
+					[options]="deviceTypeOptions"></app-select-control>
+			</div>
+			<div class="input-item">
+				<label>
+					Store Name	
+				</label>	
+				<input type="text" placeholder="Enter store name" />
+			</div>	
+			<div class="input-item">
+				<label>
+					Store ID
+				</label>	
+				<input type="text" placeholder="Enter ID" />
+			</div>	
+			<div class="input-item input-item--select">
+				<label>
+					OS
+				</label>	
+				<app-select-control
+					prompt="Select"
+					[options]="osOptions"></app-select-control>
+			</div>
+			<div class="input-item">
+				<label>
+					Description	
+				</label>	
+				<textarea placeholder="Enter description">
+						
+				</textarea>
+			</div>
+
+			<!-- FORM ACTIONS -->
+			<div class="form-actions">
+				<button class="btn-cancel" type="button" (click)="dismissForm()">
+					CANCEL	
+				</button>	
+				<button class="btn-submit" type="submit">
+					SUBMIT	
+				</button>
+			</div>
+		</form>	
+	</div>
+</div>

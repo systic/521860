@@ -1,0 +1,142 @@
+.add-user-form-container {
+	position: fixed;
+	top: 128px;
+	left: 0;
+	right: 0;
+	bottom: 64px;
+	width: 100%;
+	z-index: 5000;
+
+	background-color: rgba(0,0,0,0);
+	transition: 0.25s ease-out;
+
+	&.form--visible {
+		background-color: rgba(0,0,0,0.2);
+
+		.add-user-form {
+			transform: translateX(-489px);
+		}
+	}
+
+	.add-user-form {
+		position: absolute;
+		top: 0;
+		left: 100%;
+		width: 489px;
+		height: 100%;
+		will-change: transform;
+		transition: 0.25s ease-out;
+		background-color: white;
+
+		.form-heading {
+			height: 46px;
+			background-color: #007ac8;
+			color: white;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-left: 22px;
+			padding-right: 18px;
+
+			h6 {
+				font-size: 13.76px;
+				font-weight: 500;
+				color: white;
+			}
+
+			button {
+				background-color: #006cb1;
+				width: 23px;
+				height: 23px;
+			}
+		}
+
+		form {
+			padding: 22px 32px 79px 28px;
+			background-color: white;
+			border-bottom: 1px solid #e4e4e4;
+
+			.profile-pic-uploader {
+				position: relative;
+				cursor: pointer;
+				width: 100px;
+				height: 88px;
+				border: 1px solid #eaeaea;
+				border-radius: 4px;
+				background-color: #f7f7f7;
+
+				input {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 0.1px;
+					height: 0.1px;
+					opacity: 0;
+					z-index: -1;
+				}
+			}
+
+			.form-actions {
+				margin-top: 27px;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				width: 100%;
+
+				button {
+					width: 147px;
+					height: 43px;
+					border-radius: 4px;
+					font-size: 13px;
+					font-weight: 500;
+				}
+
+				button.btn-submit {
+						background-color: #007ac8;
+						color: white;
+						margin-left: 10px;
+				}
+
+				button.btn-cancel {
+					border: 1px solid #007ac8;
+					color: #007ac8;
+				}
+			}
+		}
+	}
+
+	.input-item {
+		margin-top: 24px;
+		display: flex;
+		flex-direction: column;
+
+		&:nth-child(1) {
+			margin-top: 0;
+		}
+
+		label {
+			font-size: 14px;
+			font-weight: 500;
+			margin-bottom: 9px;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+			background-color: #f7f7f7;
+			border: 1px solid #e9e9e9;
+			border-radius: 4px;
+			padding-left: 16px;
+			padding-right: 16px;
+			font-size: 13px;
+		}
+
+		input {
+			height: 38px;
+		}
+
+		textarea {
+			min-height: 127px;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+TODO
+
+- check styling on regions dropdown
+
+- user types
+
+- map colors
+
+- heroku
+
+- YouTube video
+
+- NG SERVE + NG LINT

@@ -1,0 +1,488 @@
+<div id="dashboard-page">
+
+	<!-- DASHBOARD ( BLUE ) HEADER -->
+	<div class="dashboard-header">
+		<button class="btn-toggle-regions flex--centered"
+			(click)="toggleRegionsDropdown()">
+		 	<span class="icon-chevron-down"
+				[class.icon--flipped]="mapRegionDropdownVisible"></span>		
+		</button>		
+
+		<!-- Selected Region Details -->
+		<section class="region-details-section">
+			<h3>
+				{{ selectedRegion }}		
+			</h3>		
+			<p class="num-stores">
+				{{ numStoresForSelectedRegion + ' store' +
+					( numStoresForSelectedRegion === 1 ? '': 's' ) }}
+			</p>
+
+			<!-- MAP REGION SELECTOR -->
+			<div class="map-region-selector" *ngIf="mapRegionDropdownVisible">
+
+				<!-- North America -->
+				<button class="btn-region"
+					(click)="onMapRegionSelected('North America')"
+					[class.region--selected]="selectedRegion === 'North America'">
+					<span class="btn-region__content">
+						<span class="icon-region flex--centered"></span>	
+						<span class="region-name">
+							North America	
+						</span>
+
+						<!-- blue checkmark -->
+						<span class="icon-checkmark--blue flex--centered"
+							*ngIf="selectedRegion === 'North America'"></span>
+
+						<span class="store-status-summaries">
+							<span class="active-stores flex--centered">
+								<span class="store-status-indicator"></span>
+								<span class="store-count">
+									<!-- TODO -->	
+									{{ statusCountsByRegion.northAmerica.active }}
+								</span>
+							</span>
+							<span class="issue-stores flex--centered">
+								<span class="store-status-indicator"></span>
+								<span class="store-count">
+									<!-- TODO -->	
+									{{ statusCountsByRegion.northAmerica.issue }}
+								</span>
+							</span>
+						</span>
+					</span>		
+				</button>			
+
+				<!-- Canada -->
+				<button class="btn-region"
+					(click)="onMapRegionSelected('Canada')"
+					[class.region--selected]="selectedRegion === 'Canada'">
+					<span class="btn-region__content">
+						<span class="icon-canada flex--centered"></span>	
+						<span class="region-name">
+							Canada
+						</span>
+
+						<!-- blue checkmark -->
+						<span class="icon-checkmark--blue flex--centered"
+							*ngIf="selectedRegion === 'Canada'"></span>
+
+						<span class="store-status-summaries">
+							<span class="active-stores flex--centered">
+								<span class="store-status-indicator"></span>
+								<span class="store-count">
+									<!-- TODO -->	
+									{{ statusCountsByRegion.canada.active }}
+								</span>
+							</span>
+							<span class="issue-stores flex--centered">
+								<span class="store-status-indicator"></span>
+								<span class="store-count">
+									<!-- TODO -->	
+									{{ statusCountsByRegion.canada.issue }}
+								</span>
+							</span>
+						</span>
+					</span>		
+				</button>			
+
+				<!-- United States -->
+				<button class="btn-region"
+					(click)="onMapRegionSelected('United States')"
+					[class.region--selected]="selectedRegion === 'United States'">
+					<span class="btn-region__content">
+						<span class="icon-united-states flex--centered"></span>	
+						<span class="region-name">
+							United States
+						</span>
+
+						<!-- blue checkmark -->
+						<span class="icon-checkmark--blue flex--centered"
+							*ngIf="selectedRegion === 'United States'"></span>
+
+						<span class="store-status-summaries">
+							<span class="active-stores flex--centered">
+								<span class="store-status-indicator"></span>
+								<span class="store-count">
+									<!-- TODO -->	
+									{{ statusCountsByRegion.unitedStates.active }}
+								</span>
+							</span>
+							<span class="issue-stores flex--centered">
+								<span class="store-status-indicator"></span>
+								<span class="store-count">
+									<!-- TODO -->	
+									{{ statusCountsByRegion.unitedStates.issue }}
+								</span>
+							</span>
+						</span>
+					</span>		
+				</button>			
+
+				<!-- Mexico -->
+				<button class="btn-region"
+					(click)="onMapRegionSelected('Mexico')"
+					[class.region--selected]="selectedRegion === 'Mexico'">
+					<span class="btn-region__content">
+						<span class="icon-mexico flex--centered"></span>	
+						<span class="region-name">
+							Mexico
+						</span>
+
+						<!-- blue checkmark -->
+						<span class="icon-checkmark--blue flex--centered"
+							*ngIf="selectedRegion === 'Mexico'"></span>
+
+						<span class="store-status-summaries">
+							<span class="active-stores flex--centered">
+								<span class="store-status-indicator"></span>
+								<span class="store-count">
+									<!-- TODO -->	
+									{{ statusCountsByRegion.mexico.active }}
+								</span>
+							</span>
+							<span class="issue-stores flex--centered">
+								<span class="store-status-indicator"></span>
+								<span class="store-count">
+									<!-- TODO -->	
+									{{ statusCountsByRegion.mexico.issue }}
+								</span>
+							</span>
+						</span>
+					</span>		
+				</button>			
+
+				<!-- Cuba -->
+				<button class="btn-region"
+					(click)="onMapRegionSelected('Cuba')"
+					[class.region--selected]="selectedRegion === 'Cuba'">
+					<span class="btn-region__content">
+						<span class="icon-cuba flex--centered"></span>	
+						<span class="region-name">
+							Cuba
+						</span>
+
+						<!-- blue checkmark -->
+						<span class="icon-checkmark--blue flex--centered"
+							*ngIf="selectedRegion === 'Cuba'"></span>
+
+						<span class="store-status-summaries">
+							<span class="active-stores flex--centered">
+								<span class="store-status-indicator"></span>
+								<span class="store-count">
+									<!-- TODO -->	
+									{{ statusCountsByRegion.cuba.active }}
+								</span>
+							</span>
+							<span class="issue-stores flex--centered">
+								<span class="store-status-indicator"></span>
+								<span class="store-count">
+									<!-- TODO -->	
+									{{ statusCountsByRegion.cuba.issue }}
+								</span>
+							</span>
+						</span>
+					</span>		
+				</button>			
+
+				<!-- Guataemala -->
+				<button class="btn-region"
+					(click)="onMapRegionSelected('Guatemala')"
+					[class.region--selected]="selectedRegion === 'Guatemala'">
+					<span class="btn-region__content">
+						<span class="icon-guatemala flex--centered"></span>	
+						<span class="region-name">
+							Guatemala
+						</span>
+
+						<!-- blue checkmark -->
+						<span class="icon-checkmark--blue flex--centered"
+							*ngIf="selectedRegion === 'Guatemala'"></span>
+
+						<span class="store-status-summaries">
+							<span class="active-stores flex--centered">
+								<span class="store-status-indicator"></span>
+								<span class="store-count">
+									<!-- TODO -->	
+									{{ statusCountsByRegion.guatemala.active }}
+								</span>
+							</span>
+							<span class="issue-stores flex--centered">
+								<span class="store-status-indicator"></span>
+								<span class="store-count">
+									<!-- TODO -->	
+									{{ statusCountsByRegion.guatemala.issue }}
+								</span>
+							</span>
+						</span>
+					</span>		
+				</button>			
+
+				<!-- Honduras -->
+				<button class="btn-region"
+					(click)="onMapRegionSelected('Honduras')"
+					[class.region--selected]="selectedRegion === 'Honduras'">
+					<span class="btn-region__content">
+						<span class="icon-honduras flex--centered"></span>	
+						<span class="region-name">
+							Honduras
+						</span>
+
+						<!-- blue checkmark -->
+						<span class="icon-checkmark--blue flex--centered"
+							*ngIf="selectedRegion === 'Honduras'"></span>
+
+						<span class="store-status-summaries">
+							<span class="active-stores flex--centered">
+								<span class="store-status-indicator"></span>
+								<span class="store-count">
+									<!-- TODO -->	
+									{{ statusCountsByRegion.honduras.active }}
+								</span>
+							</span>
+							<span class="issue-stores flex--centered">
+								<span class="store-status-indicator"></span>
+								<span class="store-count">
+									<!-- TODO -->	
+									{{ statusCountsByRegion.honduras.issue }}
+								</span>
+							</span>
+						</span>
+					</span>		
+				</button>			
+
+			</div>
+		</section>
+
+		<!-- Search Section -->
+		<div class="search-section">
+			
+			<a class="search-link flex--centered">
+				<span class="icon-search"></span>	
+			</a>	
+
+			<div class="search-input-wrapper">
+				<input type="search" placeholder="Search store, device, user..." />
+
+				<span class="icon-search flex--centered"></span>
+			</div>
+			<button class="btn-filter flex--centered">
+				<span class="icon-filter"></span>	
+			</button>
+		</div>
+
+	</div><!-- dashboard header ( dark blue bar ) -->
+
+	<!-- PRIMARY CONTENT -->
+	<div class="primary-content container-fluid">
+		<div class="row no-gutters">
+
+			<div class="col-xl-9">
+					
+				<!-- GOOGLE MAP -->
+				<div class="map-container">
+					<agm-map
+						[latitude]="mapPosition.lat"
+						[longitude]="mapPosition.lng"
+						[zoom]="mapZoom"
+						[fitBounds]="latLngBounds"
+						>
+						
+						<agm-marker
+							*ngFor="let store of displayedStoreSummaries; let i = index;"
+							[latitude]="store.coordinates.lat"
+							[longitude]="store.coordinates.lng"
+							[iconUrl]="activeMarkerIndex === i ? '/assets/img/active-marker.png' :
+								store.status === 'active' ?
+								'/assets/img/icons/status--active.png' :
+								'/assets/img/icons/status--issue.png'"
+							(mouseOver)="onMarkerMouseOver(store, i)"
+							(mouseOut)="onMarkerMouseOut(store, i)"
+							(markerClick)="onMarkerClick(store, i)">
+						
+							<agm-snazzy-info-window
+								[closeWhenOthersOpen]="true"
+	 							[isOpen]="infowindowData.storeIndex === i"
+								placement="right">
+								<ng-template>
+									<store-info-window
+										[store]="store"></store-info-window>
+								</ng-template>
+									
+							</agm-snazzy-info-window>
+
+						</agm-marker>
+					</agm-map>	
+
+					<!-- STORES FILTER BUTTONS -->
+					<div class="store-filter-buttons">
+						<button class="btn-active-stores flex--centered"
+							[class.filter--active]="showOnlyActiveStores"
+							(click)="filterActiveStoresBtnClick()">
+							<span class="store-type-indicator flex--centered bg--light-blue"></span>	
+
+							<span class="num-stores">
+								{{ numActiveStoresForSelectedRegion  }}	
+							</span>
+							<span>
+								{{ 'active store' + ( numActiveStoresForSelectedRegion   === 1 ? '' : 's' ) }}
+							</span>
+						</button>
+						<button class="btn-issue-stores flex--centered"
+							[class.filter--active]="showOnlyIssueStores"
+							(click)="filterIssueStoresBtnClick()">
+							<span class="store-type-indicator flex--centered bg--red"></span>	
+
+							<span class="num-stores">
+								{{ numIssueStoresForSelectedRegion }}	
+							</span>
+							<span>
+								{{ 'issue store' + ( numIssueStoresForSelectedRegion === 1 ? '' : 's' ) }}
+							</span>
+						</button>
+					</div>
+				</div>	
+			</div>
+
+			<div class="col-xl-3">
+					
+				<!-- SUMMARY ASIDE -->
+				<aside class="summary-aside"
+					[class.summary-aside--visible]="mobileSummarySectionVisible">
+					<button class="btn-handle flex--centered"
+						(click)="dismissSummarySection()">
+						<span class="icon-handle-chevron"></span>	
+					</button>
+					<div class="summary-aside__content">
+						<h2>
+							Summary	
+						</h2>		
+
+						<!-- Total Number of Stores -->
+						<div class="total-stores">
+							<span class="section-label">
+								Total Stores	
+							</span>
+							<span class="stores-count">
+								{{ numStoresForSelectedRegion }}	
+							</span>
+						</div>
+
+						<!-- Stores Status Summary -->
+						<div class="stores-status-summary">
+
+							<!-- Active Stores -->
+							<div class="store-status-summary store-status--active">
+								<div class="store-status__heading">
+									<div class="heading-text">
+										<h5>
+											{{ numActiveStoresForSelectedRegion }}		
+										</h5>	
+										<span class="status-percent">
+											{{ percentStoresActiveForSelectedRegion + '%' }}
+										</span>
+									</div>
+									<span class="status-indicator"></span>
+								</div>	
+								<div class="store-status__body">
+									<label>
+										Active Stores	
+									</label>	
+									<span class="icon-up-arrow"></span>
+								</div>
+							</div>	
+
+							<!-- Issue Stores -->
+							<div class="store-status-summary store-status--issue">
+								<div class="store-status__heading">
+									<div class="heading-text">
+										<h5>
+											{{ numIssueStoresForSelectedRegion }}		
+										</h5>	
+										<span class="status-percent">
+											{{ percentStoresIssueForSelectedRegion + '%' }}
+										</span>
+									</div>
+									<span class="status-indicator"></span>
+								</div>	
+								<div class="store-status__body">
+									<label>
+										Issue Stores	
+									</label>	
+									<span class="icon-up-arrow"></span>
+								</div>
+							</div>	
+						</div><!-- stores status summary -->
+
+						<!-- STORES STATUS HISTORY -->
+						<div class="stores-status-history"
+							*ngIf="hourlyStoreStatuses">
+
+							<ngx-carousel
+								[inputs]="statusHistoryCarouselOptions"
+								(carouselLoad)="onStatusHistoryCarouselLoad($event)">
+								
+								<ngx-item NgxCarouselItem>
+									<store-status-history-card
+										[history]="hourlyStoreStatuses.slice(0, 7)"
+										currentHour="16:00"></store-status-history-card>		
+								</ngx-item>
+								<ngx-item NgxCarouselItem>
+									<store-status-history-card
+										[history]="hourlyStoreStatuses.slice(7, 14)"
+										currentHour="16:00"></store-status-history-card>		
+								</ngx-item>
+								<ngx-item NgxCarouselItem>
+									<store-status-history-card
+										[history]="hourlyStoreStatuses.slice(14, 21)"
+										currentHour="16:00"></store-status-history-card>		
+								</ngx-item>
+								<ngx-item NgxCarouselItem>
+									<store-status-history-card
+										[history]="hourlyStoreStatuses.slice(21)"
+										currentHour="16:00"></store-status-history-card>		
+								</ngx-item>
+
+								<button NgxCarouselPrev
+									class="btn-carousel-prev"></button>
+								<button NgxCarouselNext
+	 								class="btn-carousel-next"></button>
+
+							</ngx-carousel>	
+						</div>
+					</div><!-- summary aside content -->
+				</aside><!-- summary aside -->
+			</div>
+				
+		</div><!-- end row -->
+	</div><!-- primary content -->
+
+
+	<!-- BOTTOM VIEW HANDLE 
+		( this dark gray bar at the bottom of the page on mobile/tablet for
+		displaying the summary views ) -->
+	<button class="view-handle flex--centered"
+		(click)="onViewHandleClick()">
+		<span class="handle-indicator">
+				
+		</span>
+	</button>
+
+	<!-- STORE DETAILS VIEW  -->
+	<div class="store-details-view-wrapper"
+		[class.store-details--visible]="mobileStoreDetailsVisible">
+		<store-details-view
+      			*ngIf="selectedStore"
+			[store]="selectedStore"
+			(dismiss)="dismissStoreDetailsView()"
+			(displayDeviceSummary)="displaySelectedStoreDeviceSummary()"></store-details-view>	
+	</div>
+
+	<!-- SELECTED STORE DEVICE SUMMARY MODAL -->
+	<div class="device-summary-modal-wrapper" *ngIf="deviceSummaryModalVisible">
+		<device-summary-modal
+			[deviceSummaries]="selectedStoreDeviceSummaries"
+			(dismiss)="dismissSelectedStoreDeviceSummary()"></device-summary-modal>	
+	</div>
+</div>

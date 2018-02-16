@@ -1,0 +1,168 @@
+<div id="user-management-page">
+
+	<!-- PAGE SUBHEADER -->
+	<div class="page-subheader">
+		<section class="page-details">
+			<h3>
+				User Management	
+			</h3>
+			<span class="num-users">
+				{{ allUsers.length + ' user' + ( allUsers.length === 1 ? '' : 's' ) }}					
+			</span>
+		</section>
+		<div class="search-input-wrapper">
+			<input type="search" placeholder="Search store, device, user..." />	
+			<span class="icon-search flex--centered"></span>
+		</div>
+	</div>
+
+
+	<!-- PRIMARY CONTENT -->
+	<div class="primary-content-wrapper">
+		<div class="primary-content">
+
+			<!-- TABLE HEADING -->
+			<div class="table-heading">
+				<h3>
+					USER MANAGEMENT	
+				</h3>	
+				<div class="table-actions">
+					<button class="btn-update flex--centered">
+						<span class="icon-update"></span>	
+						<span class="btn-text">
+							Update user	
+						</span>
+					</button>	
+					<button class="btn-reset-password flex--centered">
+						<span class="icon-lock--blue flex--centered"></span>
+						<span class="btn-text">
+							Reset password
+						</span>	
+					</button>
+					<button class="btn-deactivate flex--centered">
+						<span class="icon-deactivate"></span>	
+						<span class="btn-text">
+							Deactivate user	
+						</span>
+					</button>
+					<button class="btn-add-user flex--centered"
+						(click)="addUserFormVisible = true">
+						<span class="icon-add--white"></span>	
+						<span class="btn-text">
+							Add user
+						</span>
+					</button>
+					<div class="table-layouts">
+						<button class="btn-grid-layout flex--centered"
+							(click)="gridLayout = true">
+							<span class="icon-grid" *ngIf="!gridLayout"></span>	
+							<span class="icon-grid--blue" *ngIf="gridLayout"></span>	
+						</button>	
+						<button class="btn-rows-layout flex--centered"
+							(click)="gridLayout = false">
+							<span class="icon-rows" *ngIf="gridLayout"></span>	
+							<span class="icon-rows--blue" *ngIf="!gridLayout"></span>	
+						</button>
+					</div>
+				</div><!-- table layout actions -->
+			</div><!-- table heading -->
+
+
+			<!-- BOOTSTRAP CONTAINER -->
+			<div class="container-fluid">
+
+				<!-- GRID VIEW -->
+				<div class="grid-view" *ngIf="gridLayout">
+					<div class="row no-gutters">
+						<div class="col-xl-4 user-card-wrapper" *ngFor="let user of displayedUsers">
+							<app-user-card
+								[user]="user"></app-user-card>	
+						</div>	
+					</div>	
+				</div>	<!-- grid view -->
+
+				<!-- TABLE VIEW -->
+				<div class="table-view" *ngIf="!gridLayout">
+					<div class="row no-gutters">
+						<div class="col-xl-12">
+							<table>
+								<thead>
+									<tr>
+										<th> SELECT </th>	
+										<th (click)="sortByName()">
+											<div class="th-wrapper">
+												<span class="col-name">
+													NAME	
+												</span>	
+												<span class="icon-triangle-down flex--centered"
+													[class.transform--flipped]="!sortAscending.name"></span>
+											</div>	
+										</th>
+										<th> EMAIL ID </th>
+										<th (click)="sortByUserId()">
+											<div class="th-wrapper">
+												<span class="col-name">
+													USER ID	
+												</span>	
+												<span class="icon-triangle-down flex--centered"
+													[class.transform--flipped]="!sortAscending.userId"></span>
+											</div>	
+										</th>
+										<th (click)="sortByRole()">
+											<div class="th-wrapper">
+												<span class="col-name">
+													ROLE
+												</span>	
+												<span class="icon-triangle-down flex--centered"
+													[class.transform--flipped]="!sortAscending.role"></span>
+											</div>	
+										</th>
+										<th> PHONE NUMBER </th>
+									</tr>	
+								</thead>		
+								<tbody>
+									<tr *ngFor="let user of displayedUsers">
+										<td>
+											<div class="flex--centered">
+												<app-checkbox-control></app-checkbox-control>	
+											</div>	
+										</td>	
+										<td>
+											{{ user.name }}	
+										</td>
+										<td>
+											{{ user.email }}	
+										</td>
+										<td>
+											{{ user.id }}	
+										</td>
+										<td>
+											{{ user.type === 'admin' ? 'Admin' :
+												user.type === 'user' ? 'User' : '' }}
+										</td>
+										<td>
+											{{ user.phone }}	
+										</td>
+									</tr>	
+								</tbody>
+							</table>	
+						</div>	
+					</div>	
+				</div>
+			</div><!-- bootstrap container -->
+
+			<div class="paginator-wrapper">
+				<app-paginator
+					[currentPage]="currentPage"
+					[numPages]="numPages"
+					(paged)="onNewPageSelected($event)"></app-paginator>	
+			</div>
+
+		</div><!-- primary content -->
+	</div><!-- primary content wrapper -->
+
+	<aside *ngIf="addUserFormVisible">
+		<add-user-form
+			(dismiss)="addUserFormVisible = false"></add-user-form>		
+	</aside>
+</div>

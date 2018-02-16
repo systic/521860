@@ -1,0 +1,203 @@
+<div class="store-details-view">
+
+	<button class="btn-dismiss flex--centered"
+		(click)="dismissView()">
+		<span class="icon-handle-chevron"></span>	
+	</button>
+
+	<!-- close button ( for tablet and desktop ) -->
+	<button class="btn-close flex--centered" (click)="dismissView()">
+		<span class="icon-close"></span>	
+	</button>
+
+	<div class="store-details__primary">
+		<div class="store-details__heading">
+			<h2>
+				{{ store.name }}	
+			</h2>
+			<div class="status-section">
+				<span class="status-indicator"
+					[class.bg--red]="store.status === 'issue'"
+					[class.bg--light-blue]="store.status === 'active'"></span>
+				<label>
+					{{ store.status === 'active' ? 'Active' :
+						store.status === 'issue' ? 'Issue' : '' }}	
+				</label>	
+			</div>	
+		</div>	
+
+		<!-- POS Section -->
+		<div class="pos-section">
+			<button>
+				<span class="btn-title">
+					POS AISLES	
+				</span>	
+				<span class="icon-card--white flex--centered"></span>
+			</button>		
+			<div class="total-devices">
+				<label>
+					Total Devices
+				</label>	
+				<span class="num-devices">
+					{{ store.posAisles.count }}							
+				</span>
+			</div>
+			<div class="pos-summary">
+				<div class="stat-item stat-item--perfect">
+					<div class="stat-details">
+						<div class="stats">
+							<span class="count">
+								{{ store.posAisles.numPerfect }}	
+							</span>	
+							<span class="percent">
+								{{ posAisles.percentPerfect + '%' }}	
+							</span>
+						</div>	
+						<label>
+							Perfect		
+						</label>
+					</div>	
+					<div class="stat-icons">
+						<span class="icon-perfect flex--centered"></span>	
+						<span class="icon-up-arrow flex--centered"></span>
+					</div>
+				</div>	
+				<div class="stat-item stat-item--good">
+					<div class="stat-details">
+						<div class="stats">
+							<span class="count">
+								{{ store.posAisles.numGood }}	
+							</span>	
+							<span class="percent">
+								{{ posAisles.percentGood + '%' }}	
+							</span>
+						</div>	
+						<label>
+							Good		
+						</label>
+					</div>	
+					<div class="stat-icons">
+						<span class="icon-good flex--centered"></span>	
+						<span class="icon-up-arrow flex--centered"></span>
+					</div>
+				</div>	
+				<div class="stat-item stat-item--down">
+					<div class="stat-details">
+						<div class="stats">
+							<span class="count">
+								{{ store.posAisles.numDown }}	
+							</span>	
+							<span class="percent">
+								{{ posAisles.percentDown + '%' }}	
+							</span>
+						</div>	
+						<label>
+							Down		
+						</label>
+					</div>	
+					<div class="stat-icons">
+						<span class="icon-down flex--centered"></span>	
+						<span class="icon-up-arrow flex--centered"></span>
+					</div>
+				</div>	
+
+				<a>
+					See more &gt;	
+				</a>
+			</div><!-- pos summary -->
+		</div>
+
+		<!-- STORE PERFORMANCE SECTION -->
+		<div class="store-performance-section">
+			<button>
+				<span class="btn-title">
+					Store Performance	
+				</span>	
+				<span class="btn-icon"> $ </span>
+			</button>	
+
+			<div class="store-performance__summary">
+				<label>
+					Sales Number	
+				</label>	
+				<span class="sales">
+					{{ store.storePerformance.salesNum }}	
+				</span>
+			</div>
+
+			<div class="store-performance__stats">
+				<div class="stat-item" *ngFor="let period of store.storePerformance.performancePeriods.slice(0, 3)">
+					<span class="stat">
+						{{ period.amount }}
+					</span>	
+					<label>
+						{{ period.time }}	
+					</label>
+				</div>	
+			</div>
+		</div><!-- store performance section -->
+
+		<!-- NETWORK PERFORMANCE SECTION -->
+		<div class="network-performance-section">
+			<button>
+				<span class="btn-title">
+					Network Performance	
+				</span>	
+				<span class="icon-network--white flex--centered"></span>
+			</button>	
+			<div class="network-performance__summary">
+				<label>
+					Total Devices	
+				</label>	
+				<span class="count">
+					{{ store.networkPerformance.total }}	
+				</span>
+			</div>
+			<div class="network-stats">
+				<div class="stat-item">
+					<div class="stat-details">
+						<div class="stat-nums">
+							<span class="count">
+								{{ store.networkPerformance.numConnected }}	
+							</span>	
+							<span class="percentage">
+								{{ network.percentConnected + '%' }}	
+							</span>
+						</div>	
+						<label>
+							Connected	
+						</label>
+					</div>	
+					<div class="stat-icons">
+						<span class="stat-indicator bg--light-blue flex--centered"></span>
+						<span class="icon-up-arrow"></span>
+					</div>
+				</div>	
+				<div class="stat-item">
+					<div class="stat-details">
+						<div class="stat-nums">
+							<span class="count">
+								{{ store.networkPerformance.total - store.networkPerformance.numConnected }}	
+							</span>	
+							<span class="percentage">
+								{{ network.percentNotConnected + '%' }}	
+							</span>
+						</div>	
+						<label>
+							Not Connected	
+						</label>
+					</div>	
+					<div class="stat-icons">
+						<span class="stat-indicator bg--red flex--centered"></span>
+						<span class="icon-up-arrow"></span>
+					</div>
+				</div>	
+			</div>
+		</div><!-- network performance section -->
+
+		<!-- STORE DETAILS BUTTON -->
+		<button class="btn-store-details flex--centered" (click)="onStoreDetailsBtnClick()">
+			Store details &gt;	
+		</button>
+	</div><!-- store details primary -->
+</div>

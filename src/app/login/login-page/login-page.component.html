@@ -1,0 +1,77 @@
+<div id="login-page">
+
+	<!-- LOGIN BANNER ( TOP ) SECTION -->
+	<div class="login-banner">
+		<div class="page-heading">
+			<div class="logo-wrapper">
+				<img src="/assets/img/Wipro-logo.png" alt="logo" />	
+			</div>	
+
+			<!-- page navigation -->
+			<nav>
+				<a>
+					About the App	
+				</a>	
+				<a>
+					Contact Us
+				</a>	
+				<a>
+					FAQs
+				</a>	
+			</nav>
+		</div>
+
+		<div class="page-title-area">
+			<h2>
+				Store Devices Health Monitor Application		
+			</h2>	
+
+			<p>
+				This Application helps users and admin to monitor the health of the POS (Point of Sales) devices &amp; network devices in the stores, across the globe.	
+			</p>
+
+			<div class="page-actions">
+				<a class="btn-watch-demo flex--centered">
+					Watch Demo	
+				</a>
+				<a class="btn-know-more flex--centered">
+					Know More
+				</a>
+			</div>
+		</div><!-- page title section -->
+
+		<!-- LOGIN FORM SECTION -->
+		<form id="login-form">
+			<h2>
+				Placeholder	
+			</h2>		
+
+			<input type="text" placeholder="Username" />
+
+			<div class="password-input-wrapper">
+				<input placeholder="Password"
+					[type]="passwordVisible ? 'text' : 'password'"/>
+				<button class="btn-toggle-show-password flex--centered"
+	    				type="button"
+					(click)="togglePasswordVisibility()">
+					<span class="icon-eye"></span>
+				</button>
+			</div>
+
+			<button type="button" class="btn-sign-in flex--centered"
+				(click)="navigateToDashboard()">
+				SIGN IN	
+			</button>
+
+			<app-checkbox-control
+				label="Remember me"></app-checkbox-control>
+
+		</form>
+	</div><!-- login banner -->
+
+	<div class="secondary-content">
+		<!-- no content -->
+
+		<app-footer></app-footer>
+	</div>
+</div>

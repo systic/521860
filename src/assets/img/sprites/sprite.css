@@ -1,0 +1,622 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-add--white {
+  background-image: url(sprite.png);
+  background-position: -110px -106px;
+  width: 17px;
+  height: 17px;
+}
+.icon-admin {
+  background-image: url(sprite.png);
+  background-position: -129px 0px;
+  width: 24px;
+  height: 26px;
+}
+.icon-card--white {
+  background-image: url(sprite.png);
+  background-position: -32px -126px;
+  width: 17px;
+  height: 13px;
+}
+.icon-card {
+  background-image: url(sprite.png);
+  background-position: -153px -87px;
+  width: 14px;
+  height: 12px;
+}
+.icon-checkmark--blue {
+  background-image: url(sprite.png);
+  background-position: -24px -144px;
+  width: 13px;
+  height: 10px;
+}
+.icon-checkmark {
+  background-image: url(sprite.png);
+  background-position: -66px -126px;
+  width: 12px;
+  height: 9px;
+}
+.icon-chevron-down {
+  background-image: url(sprite.png);
+  background-position: -49px -126px;
+  width: 17px;
+  height: 9px;
+}
+.icon-close--light {
+  background-image: url(sprite.png);
+  background-position: -153px -112px;
+  width: 12px;
+  height: 12px;
+}
+.icon-close {
+  background-image: url(sprite.png);
+  background-position: -167px -13px;
+  width: 10px;
+  height: 10px;
+}
+.icon-dashboard--blue--large {
+  background-image: url(sprite.png);
+  background-position: -57px -106px;
+  width: 19px;
+  height: 17px;
+}
+.icon-dashboard--blue {
+  background-image: url(sprite.png);
+  background-position: -153px -48px;
+  width: 14px;
+  height: 13px;
+}
+.icon-deactivate {
+  background-image: url(sprite.png);
+  background-position: -153px -33px;
+  width: 13px;
+  height: 15px;
+}
+.icon-device-management--large {
+  background-image: url(sprite.png);
+  background-position: 0px -126px;
+  width: 17px;
+  height: 18px;
+}
+.icon-device-management {
+  background-image: url(sprite.png);
+  background-position: -153px -19px;
+  width: 14px;
+  height: 14px;
+}
+.icon-down {
+  background-image: url(sprite.png);
+  background-position: -167px -44px;
+  width: 10px;
+  height: 8px;
+}
+.icon-ex {
+  background-image: url(sprite.png);
+  background-position: -153px -74px;
+  width: 13px;
+  height: 13px;
+}
+.icon-eye {
+  background-image: url(sprite.png);
+  background-position: -153px -136px;
+  width: 12px;
+  height: 8px;
+}
+.icon-filter {
+  background-image: url(sprite.png);
+  background-position: -76px -106px;
+  width: 17px;
+  height: 17px;
+}
+.icon-canada {
+  background-image: url(sprite.png);
+  background-position: -27px -49px;
+  width: 25px;
+  height: 25px;
+}
+.icon-cuba {
+  background-image: url(sprite.png);
+  background-position: -25px -81px;
+  width: 25px;
+  height: 25px;
+}
+.icon-guatemala {
+  background-image: url(sprite.png);
+  background-position: 0px -81px;
+  width: 25px;
+  height: 25px;
+}
+.icon-honduras {
+  background-image: url(sprite.png);
+  background-position: -102px -49px;
+  width: 25px;
+  height: 25px;
+}
+.icon-mexico {
+  background-image: url(sprite.png);
+  background-position: -52px -49px;
+  width: 25px;
+  height: 25px;
+}
+.icon-region {
+  background-image: url(sprite.png);
+  background-position: -50px -81px;
+  width: 25px;
+  height: 25px;
+}
+.icon-united-states {
+  background-image: url(sprite.png);
+  background-position: -77px -49px;
+  width: 25px;
+  height: 25px;
+}
+.icon-good {
+  background-image: url(sprite.png);
+  background-position: -167px -63px;
+  width: 8px;
+  height: 8px;
+}
+.icon-gray-chevron {
+  background-image: url(sprite.png);
+  background-position: -27px -74px;
+  width: 12px;
+  height: 7px;
+}
+.icon-grid--blue {
+  background-image: url(sprite.png);
+  background-position: -129px -66px;
+  width: 21px;
+  height: 20px;
+}
+.icon-grid {
+  background-image: url(sprite.png);
+  background-position: -129px -86px;
+  width: 21px;
+  height: 20px;
+}
+.icon-handle-chevron {
+  background-image: url(sprite.png);
+  background-position: -75px -81px;
+  width: 43px;
+  height: 9px;
+}
+.icon-left-chevron--blue {
+  background-image: url(sprite.png);
+  background-position: -167px -52px;
+  width: 7px;
+  height: 11px;
+}
+.icon-left-chevron {
+  background-image: url(sprite.png);
+  background-position: -167px -32px;
+  width: 7px;
+  height: 12px;
+}
+.icon-lock--blue {
+  background-image: url(sprite.png);
+  background-position: -17px -126px;
+  width: 15px;
+  height: 18px;
+}
+.icon-menu {
+  background-image: url(sprite.png);
+  background-position: -105px -90px;
+  width: 17px;
+  height: 13px;
+}
+.icon-network--white {
+  background-image: url(sprite.png);
+  background-position: -75px -90px;
+  width: 15px;
+  height: 15px;
+}
+.icon-network {
+  background-image: url(sprite.png);
+  background-position: -153px -124px;
+  width: 12px;
+  height: 12px;
+}
+.icon-notification {
+  background-image: url(sprite.png);
+  background-position: -153px 0px;
+  width: 14px;
+  height: 19px;
+}
+.icon-perfect {
+  background-image: url(sprite.png);
+  background-position: -167px -23px;
+  width: 10px;
+  height: 9px;
+}
+.icon-phone--gray {
+  background-image: url(sprite.png);
+  background-position: 0px -156px;
+  width: 11px;
+  height: 11px;
+}
+.icon-phone {
+  background-image: url(sprite.png);
+  background-position: -11px -156px;
+  width: 11px;
+  height: 11px;
+}
+.icon-pos--large {
+  background-image: url(sprite.png);
+  background-position: -93px 0px;
+  width: 36px;
+  height: 48px;
+}
+.icon-pos {
+  background-image: url(sprite.png);
+  background-position: -143px -106px;
+  width: 10px;
+  height: 14px;
+}
+.icon-profile {
+  background-image: url(sprite.png);
+  background-position: 0px 0px;
+  width: 49px;
+  height: 49px;
+}
+.icon-router--large {
+  background-image: url(sprite.png);
+  background-position: -49px 0px;
+  width: 44px;
+  height: 45px;
+}
+.icon-router {
+  background-image: url(sprite.png);
+  background-position: -90px -90px;
+  width: 15px;
+  height: 15px;
+}
+.icon-rows--blue {
+  background-image: url(sprite.png);
+  background-position: -129px -46px;
+  width: 21px;
+  height: 20px;
+}
+.icon-rows {
+  background-image: url(sprite.png);
+  background-position: -129px -26px;
+  width: 21px;
+  height: 20px;
+}
+.icon-search {
+  background-image: url(sprite.png);
+  background-position: -93px -106px;
+  width: 17px;
+  height: 17px;
+}
+.icon-sign-out--large {
+  background-image: url(sprite.png);
+  background-position: -38px -106px;
+  width: 19px;
+  height: 17px;
+}
+.icon-status--active--shadow {
+  background-image: url(sprite.png);
+  background-position: 0px -106px;
+  width: 19px;
+  height: 20px;
+}
+.icon-status--active {
+  background-image: url(sprite.png);
+  background-position: 0px -144px;
+  width: 12px;
+  height: 12px;
+}
+.icon-status--issue--shadow {
+  background-image: url(sprite.png);
+  background-position: -19px -106px;
+  width: 19px;
+  height: 20px;
+}
+.icon-status--issue {
+  background-image: url(sprite.png);
+  background-position: -12px -144px;
+  width: 12px;
+  height: 12px;
+}
+.icon-triangle-down--blue {
+  background-image: url(sprite.png);
+  background-position: -167px -71px;
+  width: 8px;
+  height: 5px;
+}
+.icon-triangle-down {
+  background-image: url(sprite.png);
+  background-position: -167px -76px;
+  width: 8px;
+  height: 5px;
+}
+.icon-up-arrow {
+  background-image: url(sprite.png);
+  background-position: -167px 0px;
+  width: 10px;
+  height: 13px;
+}
+.icon-update {
+  background-image: url(sprite.png);
+  background-position: -153px -61px;
+  width: 13px;
+  height: 13px;
+}
+.icon-user-management--large {
+  background-image: url(sprite.png);
+  background-position: -127px -106px;
+  width: 16px;
+  height: 17px;
+}
+.icon-user-management {
+  background-image: url(sprite.png);
+  background-position: -153px -99px;
+  width: 12px;
+  height: 13px;
+}
+.icon-user {
+  background-image: url(sprite.png);
+  background-position: 0px -49px;
+  width: 27px;
+  height: 32px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  .icon-add--white {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-admin {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-card--white {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-card {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-checkmark--blue {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-checkmark {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-chevron-down {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-close--light {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-close {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-dashboard--blue--large {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-dashboard--blue {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-deactivate {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-device-management--large {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-device-management {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-down {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-ex {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-eye {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-filter {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-canada {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-cuba {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-guatemala {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-honduras {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-mexico {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-region {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-united-states {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-good {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-gray-chevron {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-grid--blue {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-grid {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-handle-chevron {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-left-chevron--blue {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-left-chevron {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-lock--blue {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-menu {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-network--white {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-network {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-notification {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-perfect {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-phone--gray {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-phone {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-pos--large {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-pos {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-profile {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-router--large {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-router {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-rows--blue {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-rows {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-search {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-sign-out--large {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-status--active--shadow {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-status--active {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-status--issue--shadow {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-status--issue {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-triangle-down--blue {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-triangle-down {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-up-arrow {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-update {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-user-management--large {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-user-management {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+  .icon-user {
+    background-image: url(sprite@2x.png);
+    background-size: 177px 167px;
+  }
+}

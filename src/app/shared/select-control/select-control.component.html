@@ -1,0 +1,15 @@
+<div class="select-control">
+	<div class="select-control__primary" (click)="toggleOptions()">
+		<span class="selected-option">
+			{{ selectedOption || prompt }}	
+		</span>	
+		<span class="icon-gray-chevron flex--centered"></span>
+	</div>	
+
+	<div class="options" *ngIf="optionsVisible">
+		<span class="option" *ngFor="let option of options"
+			(click)="onOptionSelected(option)">
+			{{ option }}	
+		</span>
+	</div>
+</div>

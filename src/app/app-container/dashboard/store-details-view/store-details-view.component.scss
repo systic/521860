@@ -1,0 +1,465 @@
+@import '../../../../variables';
+@import '../../../../breakpoints';
+
+.store-details-view {
+	position: relative;
+	background-color: white;
+
+	.btn-dismiss {
+		width: 100%;
+		height: 33px;
+		margin-bottom: 5px;
+
+		@include for-tablet-up {
+			display: none;
+		}
+	}
+
+	.btn-close {
+		position: absolute;
+		top: 7px;
+		right: 7px;
+		width: 32px;
+		height: 32px;
+		border-radius: 4px;
+		background-color: $background-color;
+		display: none;
+
+		@include for-tablet-up {
+			display: flex;
+		}
+	}
+
+	.store-details__primary {
+		padding-left: 21px;
+		padding-right: 21px;
+		padding-bottom: 21px;
+		height: calc(100vh - 139.5px);
+		overflow-y: scroll;
+
+		@include for-tablet-up {
+			height: 590px;
+			padding: 31px 42px 21px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+		}
+
+		@include for-desktop-up {
+			padding-top: 36px;
+			height: calc(100vh - 128px);
+		}
+
+		.store-details__heading {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-bottom: 22px;
+			border-bottom: 1px solid #e4e4e4;
+
+			@include for-tablet-up {
+				width: 100%;
+				margin-bottom: 20px;
+
+				h2 {
+					font-weight: bold;
+				}
+			}
+
+			.status-section {
+				display: flex;
+				align-items: center;
+
+				label {
+					font-size: 16px;
+				}
+
+				.status-indicator {
+					width: 8px;
+					height: 8px;
+					border-radius: 4px;
+					display: inline-block;
+					margin-right: 10px;
+				}
+			}
+		}
+
+		/**
+		 * POS SECTION
+		 */
+
+		.pos-section {
+			padding-top: 20px;
+
+			@include for-tablet-up {
+				padding-top: 0;
+				padding-right: 42px;
+				width: 50%;
+				border-right: 1px solid #e4e4e4;
+			}
+
+			@include for-desktop-up {
+				width: 100%;
+				padding-right: 0;
+				border-right: none;
+			}
+
+			button {
+				width: 100%;
+				height: 64px;
+				border-radius: 4px;
+				background-color: $light-blue;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding-left: 21px;
+				padding-right: 21px;
+
+				.btn-title {
+					color: white;
+					font-size: 16px;
+					font-weight: bold;
+				}
+			}
+
+			.total-devices {
+				margin-bottom: 19px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				height: 65px;
+				border-bottom: 1px solid #e4e4e4;
+
+				label {
+					font-size: 16px;
+				}
+
+				.num-devices {
+					font-size: 30px;
+					font-weight: bold;
+				}
+			}
+
+			.pos-summary {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+
+				.stat-item {
+					display: flex;
+					width: 33.333%;
+					height: 44px;
+					padding-left: 20px;
+					padding-right: 20px;
+
+					&:nth-child(2) {
+						border-right: 1px solid #e4e4e4;
+						border-left: 1px solid #e4e4e4;
+					}
+
+					&:nth-child(2),
+					&:nth-child(3) {
+
+						.icon-up-arrow {
+							transform: rotateX(180deg);
+						}
+					}
+
+					.stat-details {
+						display: flex;
+						flex-direction: column;
+
+						.stats {
+							display: flex;
+							align-items: baseline;
+							transform: translateY(-6px);
+
+							.count {
+								font-weight: bold;
+								font-size: 24px;
+								margin-right: 7px;
+							}
+
+							.percent {
+								font-size: 14px;
+								color: #838383;
+							}
+						}
+						
+						label {
+							transform: translateY(6px);
+							font-size: 14px;
+							font-weight: bold;
+						}
+					}
+
+					.stat-icons {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						margin-left: 14px;
+					}
+				}
+
+				a {
+					margin-top: 19px;
+				}
+			}
+		}
+
+		/**
+		 * STORE PERFORMANCE SECTION
+		 */
+
+		.store-performance-section {
+			margin-top: 30px;
+
+			@include for-tablet-up {
+				width: 50%;
+				margin-top: 0;
+				padding-left: 42px;
+			}
+
+			@include for-desktop-up {
+				width: 100%;
+				padding-left: 0;
+			}
+
+			button {
+				padding-left: 21px;
+				padding-right: 21px;
+				width: 100%;
+				height: 64px;
+				border-radius: 4px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				background-color: $teal;
+
+				span {
+					color: white;
+					font-weight: bold;
+					
+					&.btn-title {
+						font-size: 16px;
+					}
+
+					&.btn-icon {
+						font-size: 24px;
+					}
+				}
+			}
+
+			.store-performance__summary {
+				height: 65px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding-left: 21px;
+				padding-right: 21px;
+				border-bottom: 1px solid #e4e4e4;
+
+				label {
+					font-size: 16px;
+				}
+
+				.sales {
+					font-size: 30px;
+					font-weight: bold;
+				}
+			}
+
+			.store-performance__stats {
+				display: flex;
+				margin-top: 20px;
+				min-height: 43px;
+
+
+				.stat-item {
+					height: 43px;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					padding-left: 18px;
+					padding-right: 18px;
+					width: 33.333%;
+
+					&:nth-child(2) {
+						border-left: 1px solid #e4e4e4;
+						border-right: 1px solid #e4e4e4;
+					}
+
+					.stat {
+						font-size: 18px;
+						margin-bottom: 5px;
+					}
+
+					label {
+						font-size: 12px;
+						color: #838383;
+					}
+				}
+			}
+		}
+
+		/** 
+		 * NETWORK PERFORMANCE SECTION
+		 */
+
+		.network-performance-section {
+			margin-top: 43px;
+
+			@include for-tablet-up {
+				margin-top: 22px;
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			button {
+				padding-left: 21px;
+				padding-right: 21px;
+				width: 100%;
+				height: 64px;
+				border-radius: 4px;
+				background-color: $yellow;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				@include for-tablet-up {
+					margin-bottom: 21px;
+				}
+
+				span {
+					color: white;
+					font-weight: bold;
+
+					&.btn-title {
+						font-size: 16px;
+					}
+				}
+			}
+
+			.network-performance__summary {
+				height: 65px;
+				border-bottom: 1px solid #e4e4e4;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				@include for-tablet-up {
+					padding-left: 21px;
+					padding-right: 43px;
+					width: 50%;
+					border-right: 1px solid #e4e4e4;
+					border-bottom: none;
+				}
+
+				@include for-desktop-up {
+					width: 100%;
+					padding-left: 21px;
+					padding-right: 21px;
+				}
+
+				label {
+					font-size: 16px;
+				}
+
+				.count {
+					font-size: 30px;
+				}
+			}
+
+			.network-stats {
+				margin-top: 20px;
+
+				display: flex;
+				align-items: center;
+
+				@include for-tablet-up {
+					width: 50%;
+					margin-top: 0;
+				}
+
+				@include for-desktop-up {
+					width: 100%;
+					margin-top: 20px;
+				}
+
+				.stat-item {
+					display: flex;
+					justify-content: space-between;
+					min-height: 43px;
+					padding-left: 20px;
+					padding-right: 20px;
+					width: 50%;
+					height: 43px;
+
+					&:nth-child(2) {
+						border-left: 1px solid #e4e4e4;
+
+						.icon-up-arrow {
+							transform: rotateX(180deg);
+						}
+					}
+
+					.stat-details {
+						display: flex;
+						flex-direction: column;
+
+						.stat-nums {
+							margin-bottom: 5px;
+							display: flex;
+							align-items: baseline;
+							transform: translateY(-6px);
+
+							.count {
+								font-weight: bold;
+								font-size: 24px;
+								margin-right: 7px;
+							}
+
+							.percentage {
+								font-weight: bold;
+								font-size: 14px;
+								color: #838383;
+							}
+						}
+
+						label {
+							font-size: 14px;
+							transform: translateY(6px);
+						}
+					}
+
+					.stat-icons {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+
+
+						.stat-indicator {
+							width: 8px;
+							height: 8px;
+							border-radius: 4px;
+						}
+					}
+				}
+			}
+		}
+
+		.btn-store-details {
+			margin-top: 42px;
+			background-color: $background-color;
+			height: 43px;
+			border-radius: 4px;
+			font-weight: bold;
+			font-size: 16px;
+
+			@include for-tablet-up {
+				width: 100%;
+			}
+		}
+	}
+}

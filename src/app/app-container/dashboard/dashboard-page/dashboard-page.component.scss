@@ -1,0 +1,661 @@
+@import '../../../../variables';
+@import '../../../../breakpoints';
+
+#dashboard-page {
+	position: relative;
+
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	/**
+	 * DASHBOARD HEADER
+	 */
+	.dashboard-header {
+		position: relative;
+		display: flex;
+		align-items: center;
+		height: 53.5px;
+		background-color: $dark-blue;
+
+		.btn-toggle-regions {
+			width: 64px;
+			height: 100%;
+
+			&:hover {
+				background-color: $light-blue;
+			}
+
+			span.icon--flipped {
+				transform: rotateX(180deg);
+			}
+		}
+
+		@include for-tablet-up {
+			height: 64px;
+
+			.btn-toggle-regions {
+				background-color: $darker-blue;
+			}
+		}
+
+		/**
+		 * CURRENT REGION DETAILS
+		 */
+
+		.region-details-section {
+			position: relative;
+			height: 100%;
+			flex-grow: 2;
+			color: white;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			@include for-tablet-up {
+				padding-left: 21px;
+				padding-right: 21px;
+				border-right: 1px solid rgba(255,255,255,0.5);
+			}
+
+			h3 {
+			}
+
+			.num-stores {
+				display: none;
+
+				@include for-tablet-up {
+					display: block;
+					font-size: 16px;
+				}
+			}
+		}
+
+		/**
+		 * SEARCH SECTION
+		 */
+
+		.search-section {
+			display: flex;
+			align-items: center;
+			height: 100%;
+
+			@include for-tablet-up {
+				flex-grow: 2;
+			}
+
+			.search-link {
+				width: 65px;
+				height: 100%;
+
+				@include for-tablet-up {
+					display: none;
+				}
+			}
+
+			.search-input-wrapper {
+				display: none;
+				flex-grow: 2;
+
+				input {
+					padding-left: 20px;
+					width: 100%;
+					height: 100%;
+					font-size: 16px;
+					color: white;
+				}
+
+				@include for-tablet-up {
+					display: block;
+					position: relative;
+					height: 100%;
+
+					.icon-search {
+						position: absolute;
+						top: 24px;
+						right: 21px;
+					}
+				}
+			}
+
+			.btn-filter {
+				display: none;
+
+				@include for-tablet-up {
+					display: flex;
+					width: 64px;
+					height: 100%;
+					background-color: $darker-blue;
+				}
+			}
+		}
+
+		/**
+		 * MAP REGION SELECTOR
+		 */
+
+		.map-region-selector {
+			z-index: 500;
+			position: absolute;
+			top: 100%;
+			left: -64px; /* width of region dropdown display button */
+			width: 100%;
+			width: 100vw;
+			background-color: white;
+
+			@include for-desktop-up {
+				left: 0;
+				width: 100%;
+			}
+
+
+			.btn-region {
+				width: 100%;
+				height: 65px;
+				padding-left: 21px;
+				padding-right: 21px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+
+				&.region--selected {
+					background-color: rgba(0, 162, 224, 0.15);
+
+					.region-name {
+						font-weight: bold;
+					}
+
+					.btn-region__content {
+						border-bottom: 2px solid transparent;
+					}
+				}
+
+				&:last-of-type {
+					.btn-region__content {
+						border-bottom: 2px solid transparent;
+					}
+				}
+
+				.btn-region__content {
+					height: 65px;
+					width: 100%;
+					display: flex;
+					align-items: center;
+					border-bottom: 2px solid #e4e4e4;
+
+
+					.region-name {
+						font-size: 18px;
+						margin-left: 17px;
+						margin-right: 20px;
+					}
+
+					.store-status-summaries {
+						padding-right: 11px;
+						flex-grow: 2;
+						display: flex;
+						align-items: center;
+						justify-content: flex-end;
+
+						.active-stores,
+					       	.issue-stores	{
+							.store-status-indicator {
+								margin-right: 10px;
+								width: 8px;
+								height: 8px;
+								border-radius: 4px;
+							}
+
+							.store-count {
+								font-size: 16px;
+							}
+						}
+
+						.active-stores {
+							margin-right: 32px;
+						}
+
+						.active-stores .store-status-indicator {
+							background-color: $light-blue;
+						}
+
+						.issue-stores .store-status-indicator {
+							background-color: $red;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/**
+	 * PRIMARY CONTENT
+	 */
+
+	.primary-content {
+		flex-grow: 2;
+		width: 100%;
+
+		/*
+		 * Calculate height so that *total* height of page matches viewport height.
+		 *
+		 * 176 = 
+		 *	53px header + 
+		 *	53.5px dark blue secondary header + 
+		 *	53.5px store filter buttons +
+		 *	16px view handle
+		 */
+		height: calc(100vh - 176px);
+
+		@include for-tablet-up {
+			/*
+			 *
+			 * 144 = 
+			 *	64x header + 
+			 *	64px dark blue secondary header + 
+			 *	16px handle
+			 */
+			height: calc(100vh - 192px);
+			height: calc(100vh - 144px)
+		}
+
+		@include for-desktop-up {
+			/*
+			 *
+			 * 192 = 
+			 *	64x header + 
+			 *	64px dark blue secondary header + 
+			 *	64px footer
+			 */
+			height: calc(100vh - 192px);
+		}
+
+		.map-container {
+			position: relative;
+			height: 100%;
+
+			agm-map {
+				height: 100%;
+			}
+		}
+	}
+
+	/**
+	 * STORE FILTER BUTTONS
+	 */
+	.store-filter-buttons {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		//bottom: 16px; /* height of handle below buttons */
+		width: 100%;
+		display: flex;
+		align-items: center;
+
+		@include for-tablet-up {
+			top: 85px;
+			top: 27px;
+			right: 21px;
+			left: auto;
+			bottom: auto;
+			justify-content: flex-end;
+		}
+
+		button {
+			height: 53.5px;
+			width: 50%;
+			background-color: white;
+
+			&:first-of-type {
+				border-right: 1px solid #e4e4e4;
+
+				@include for-tablet-up {
+					border-right: none;
+				}
+			}
+
+			&.filter--active {
+
+				span {
+					color: white;
+				}
+
+				.store-type-indicator {
+					background-color: white;
+				}
+
+				&.btn-active-stores {
+					background-color: $light-blue;
+				}
+
+				&.btn-issue-stores {
+					background-color: $red;
+				}
+			}
+
+			.store-type-indicator {
+				width: 8px;
+				height: 8px;
+				border-radius: 4px;
+				margin-right: 10px;
+			}
+
+			span {
+				font-size: 16px;
+				color: $text-black;
+
+				&.num-stores {
+					font-weight: bold;
+					margin-right: 5px;
+				}
+			}
+
+			@include for-tablet-up {
+				padding-left: 11px;
+				padding-right: 11px;
+				height: 32px;
+				border-radius: 4px;
+				width: max-content;
+
+				&:first-of-type {
+					margin-right: 11px;
+				}
+			}
+		}
+	}
+
+	/**
+	 * BAR HANDLE ( bottom of page )
+	 */
+	.view-handle {
+		height: 16px;
+		background-color: #484848;
+		margin-top: 53.5px; /* height of store filter buttons */
+
+		@include for-tablet-up {
+			margin-top: 0;
+		}
+
+		@include for-desktop-up {
+			display: none;
+		}
+
+		.handle-indicator {
+			width: 128px;
+			height: 3px;
+			border-radius: 1.5px;
+			background-color: white;
+		}
+	}
+
+	/**
+	 * SUMMARY ASIDE
+	 */
+
+	.summary-aside {
+		position: fixed;
+		transform: translateY(100vh);
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: calc(100vh - 106.5px);
+		background-color: white;
+		will-change: transform;
+		transition: 0.25s ease-out;
+
+		&.summary-aside--visible {
+			transform: translateY(106.5px) /* header + secondary header heights */
+		}
+
+		@include for-tablet-up {
+			height: calc(100vh - 128px);
+
+			&.summary-aside--visible {
+				transform: translateY(128px) /* header + secondary header heights */
+			}
+		}
+
+		@include for-desktop-up {
+			position: static;
+			width: 100%;
+			transform: translateY(0);
+
+			&.summary-aside--visible {
+				transform: translateY(0);
+			}
+		}
+
+		.btn-handle {
+			height: 32px;
+			width: 100%;
+
+			@include for-desktop-up {
+				display: none;
+			}
+		}
+
+		.summary-aside__content {
+			padding-left: 21px;
+			padding-right: 21px;
+
+			@include for-desktop-up {
+				padding-top: 38px;
+			}
+
+			h2 {
+				padding-bottom: 21px;
+				border-bottom: 1px solid #e4e4e4;
+			}
+
+
+			.total-stores {
+				margin-top: 20px;
+				height: 64px;
+				border-radius:4px;
+				background-color: $background-color;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding-left: 21px;
+				padding-right: 21px;
+
+				.section-label {
+					font-size: 16px;
+				}
+
+				.stores-count {
+					font-size: 30px;
+					font-weight: bold;
+				}
+			}
+
+			/** 
+			 * Store Status Summaries
+			 */
+
+			.stores-status-summary {
+				margin-top: 21.5px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+
+				.store-status-summary {
+					width: 46.83%;
+					height: 85px;
+					background-color: $background-color;
+					border-radius: 4px;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					padding-left: 20px;
+					padding-right: 20px;
+
+					&.store-status--issue {
+						.icon-up-arrow {
+							transform: rotateX(180deg);
+						}
+					}
+
+					.store-status__heading {
+						display: flex;
+						align-items: flex-start;
+						justify-content: space-between;
+
+						.heading-text {
+							display: flex;
+							align-items: baseline;
+						}
+
+						h5 {
+							font-size: 24px;
+							font-weight: bold;
+						}
+
+						.status-percent {
+							margin-left: 7px;
+							text-align: left;
+							font-size: 14px;
+							color: #838383;
+						}
+
+						.status-indicator {
+							width: 8px;
+							height: 8px;
+							border-radius: 4px;
+						}
+					}
+
+					.store-status__body {
+						margin-top: 6px;
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+
+						label {
+							font-size: 14px;
+						}
+					}
+
+					&.store-status--active {
+
+						.status-indicator {
+							background-color: $light-blue;
+						}
+					}
+
+					&.store-status--issue {
+						.status-indicator {
+							background-color: $red;
+						}
+					}
+				}
+			}
+		}
+
+
+		/** 
+		 * CAROUSEL
+		 */
+
+		.stores-status-history {
+			margin-top: 21px;
+
+			.btn-carousel-prev,
+			.btn-carousel-next {
+				display: none;
+			}
+		}
+	}
+
+	/**
+	 * SELECTED STORE VIEW
+	 */
+
+	.store-details-view-wrapper {
+		width: 100%;
+		position: fixed;
+		z-index: 500;
+		left: 0;
+		top: 106.5px;
+		transform: translateY(calc(100vh - 106.5px));
+		will-change: transform;
+		transition: 0.25s ease-out;
+
+		&.store-details--visible {
+			transform: translateX(0);
+		}
+
+		@include for-tablet-up {
+			top: calc(100vh - 590px);
+		}
+
+		@include for-desktop-up {
+
+			width: 28.11%;
+			top: 128px;
+			left: 100%;
+			transform: translateY(0) translateX(0);
+
+			&.store-details--visible {
+				transform: translateX(-100%);
+			}
+		}
+	}
+
+
+	/*
+	 * BOOTSTRAP CLASS OVERRIDES
+	 */
+
+	.container-fluid {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.row {
+		height: 100%;
+		width: 100%;
+	}
+
+	.col-xl-9 {
+		height: 100%;
+
+		/*
+		 * Need to override this column class to correctly set
+		 * the media query breakpoints 
+		 */
+		@include for-tablet-up {
+			max-width: 100%;
+			flex: 0 0 100%;
+		}
+
+		@include for-desktop-up {
+			max-width: 75%;
+			flex: 0 0 75%;
+
+			max-width: 71.89%;
+			flex: 0 0 71.89%;
+		}
+	}
+
+	.col-xl-3 {
+		height: 0;
+
+		@include for-tablet-up {
+			display: flex;
+			max-width: 0%;
+			flex: 0 0 0;
+			height: 0;
+		}
+
+		@include for-desktop-up {
+
+			max-width: 28.11%;
+			flex: 0 0 28.11%;
+			height: initial;
+			height: 100%;
+		}
+	}
+}

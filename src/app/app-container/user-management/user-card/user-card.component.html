@@ -1,0 +1,32 @@
+<div class="user-card">
+
+	<div class="user-avatar-wrapper flex--centered">
+		<span class="icon-user" *ngIf="user.type === 'user'"></span>
+		<span class="icon-admin" *ngIf="user.type === 'admin'"></span>
+	</div>
+
+	<div class="user-card__primary">
+		<div class="user-name-and-type">
+			<app-checkbox-control></app-checkbox-control>	
+			<h5 class="user-name">
+				{{ user.name }}	
+			</h5>
+			<label class="user-type"
+				[class.text--green]="user.type === 'admin'">
+				{{ user.type | uppercase }}	
+			</label>
+		</div>	
+		<p class="user-email">
+			{{ user.email }}	
+		</p>
+		<p class="user-id">
+			{{ 'ID : ' + user.id }}		
+		</p>
+		<p class="user-phone">
+			<span class="icon-phone flex--centered"></span>	
+			<span class="phone">
+				{{ user.phone }}	
+			</span>
+		</p>
+	</div>
+</div>

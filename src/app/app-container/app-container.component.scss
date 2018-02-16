@@ -1,0 +1,61 @@
+@import '../../breakpoints';
+@import '../../variables';
+
+#app-container {
+	position: relative;
+	width: 100;
+
+	.nav-menu-wrapper {
+		z-index: 500;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		display: none;
+
+		@include for-tablet-up {
+			display: block;
+			left: initial;
+			right: 100%;
+			width: $nav-menu-tablet-width;
+			min-height: 100vh;
+		}
+
+		@include for-desktop-up {
+			display: none;
+		}
+	}
+
+	&.nav-menu--visible {
+
+		.nav-menu-wrapper {
+			display: block;
+
+			@include for-desktop-up {
+				display: none;
+			}
+		}
+
+	}
+
+	.footer-wrapper {
+		display: none;
+
+		@include for-desktop-up {
+			display: block;
+		}
+	}
+
+	@include for-tablet-up {
+		will-change: transform;
+		transition: 0.25s ease-out;
+
+		&.nav-menu--visible {
+			transform: translateX($nav-menu-tablet-width);
+
+			@include for-desktop-up {
+				transform: translateX(0);
+			}
+		}
+	}
+}

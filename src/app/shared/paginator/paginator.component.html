@@ -1,0 +1,29 @@
+<div class="app-paginator">
+
+	<button class="btn-prev flex--centered"
+		[disabled]="currentPage === 0"
+		(click)="prevPage()">
+		<span class="icon-left-chevron" *ngIf="currentPage === 0"></span>	
+		<span class="icon-left-chevron--blue" *ngIf="currentPage !== 0"></span>
+	</button>
+
+	<!-- PAGE BUTTONS -->
+	<div class="page-buttons">
+		<button class="page-button flex--centered"
+	  		*ngFor="let page of pageCounter; let i = index;"
+			[class.page-button--active]="currentPage === i"
+			(click)="selectPage(i)">
+				
+			<span>
+				{{ i + 1 }}	
+			</span>
+		</button>	
+	</div>
+
+	<button class="btn-next flex--centered"
+		[disabled]="currentPage === numPages - 1"
+		(click)="nextPage()">
+		<span class="icon-left-chevron" *ngIf="currentPage === ( numPages - 1 )"></span>	
+		<span class="icon-left-chevron--blue" *ngIf="currentPage < ( numPages - 1 )"></span>
+	</button>
+</div>

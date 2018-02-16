@@ -1,0 +1,39 @@
+@import '../../../breakpoints';
+
+footer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 11px;
+	padding-right: 21px;
+	height: 31.5px;
+	background-color: #484848;
+	color: white;
+
+	@include for-tablet-up {
+		height: 64px;
+		padding-left: 21px;
+		padding-right: 21px;
+	}
+
+	span {
+		font-size: 9px;
+		color: white;
+
+		@include for-tablet-up {
+			font-size: 14px;
+		}
+	}
+
+	.btn-scroll-top {
+		width: 43px;
+		height: 43px;
+		border-radius: 4px;
+		background-color: #3d3d3d;
+
+		span {
+			transform: rotateX(180deg);
+		}
+	}
+}

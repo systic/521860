@@ -1,0 +1,75 @@
+@import '../../../../variables';
+
+.store-info-window {
+	width: 108px;
+
+	.info-window__heading {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		h4 {
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+		.status-indicator {
+			width: 8px;
+			height: 8px;
+			border-radius: 4px;
+			display: inline-block;
+		}
+	}
+
+	.info-window__body {
+
+		.pos-section,
+		.store-performance-section,
+		.network-performance-section {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.pos-section {
+			margin-top: 12px;
+		}
+
+		.store-performance-section,
+		.network-performance-section {
+			margin-top: 5px;
+		}
+
+		.pos-count,
+		.store-performance,
+		.network-performance {
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+		.pos-section__secondary,
+		.store-performance__secondary,
+		.network-performance__secondary {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			label {
+				font-size: 12px;
+			}
+		}
+
+		.pos-count {
+			color: $light-blue;
+		}
+
+		.store-performance,
+	       	.store-performance__secondary span {
+			font-weight: bold;
+			color: $teal;
+		}
+
+		.network-performance {
+			color: $yellow;
+		}
+	}
+}

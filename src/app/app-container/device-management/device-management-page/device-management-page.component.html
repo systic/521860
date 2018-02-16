@@ -1,0 +1,186 @@
+<div id="device-management-page">
+
+	<!-- PAGE SUBHEADER -->
+	<div class="page-subheader">
+		<section class="page-details">
+			<h3>
+				Device Management	
+			</h3>
+			<span class="num-devices">
+					
+			</span>
+		</section>
+		<div class="search-input-wrapper">
+			<input type="search" placeholder="Search store, device, user..." />	
+			<span class="icon-search flex--centered"></span>
+		</div>
+	</div>
+
+	<!-- PRIMARY CONTENT -->
+	<div class="primary-content-wrapper">
+		<div class="primary-content">
+
+			<!-- TABLE HEADING -->
+			<div class="table-heading">
+				<h3>
+					DEVICE MANAGEMENT	
+				</h3>	
+				<div class="table-actions">
+					<button class="btn-update flex--centered">
+						<span class="icon-update"></span>	
+						<span class="btn-text">
+							Update device	
+						</span>
+					</button>	
+					<button class="btn-deactivate flex--centered">
+						<span class="icon-deactivate"></span>	
+						<span class="btn-text">
+							Deactivate device	
+						</span>
+					</button>
+					<button class="btn-add-device flex--centered"
+						(click)="addDeviceFormVisible = true">
+						<span class="icon-add--white"></span>	
+						<span class="btn-text">
+							Add device
+						</span>
+					</button>
+					<div class="table-layouts">
+						<button class="btn-grid-layout flex--centered"
+							(click)="gridLayout = true">
+							<span class="icon-grid" *ngIf="!gridLayout"></span>	
+							<span class="icon-grid--blue" *ngIf="gridLayout"></span>	
+						</button>	
+						<button class="btn-rows-layout flex--centered"
+							(click)="gridLayout = false">
+							<span class="icon-rows" *ngIf="gridLayout"></span>	
+							<span class="icon-rows--blue" *ngIf="!gridLayout"></span>	
+						</button>
+					</div>
+				</div><!-- table layout actions -->
+			</div><!-- table heading -->
+
+			<!-- BOOTSTRAP CONTAINER -->
+			<div class="container-fluid">
+
+				<!-- GRID VIEW -->
+				<div class="grid-view" *ngIf="gridLayout">
+					<div class="row no-gutters">
+						<div class="col-xl-4 device-card-wrapper" *ngFor="let device of displayedDevices">
+							<app-device-card
+								[device]="device"></app-device-card>	
+						</div>	
+					</div>	
+				</div>	
+
+				<!-- TABLE VIEW -->
+				<div class="table-view" *ngIf="!gridLayout">
+					<div class="row no-gutters">
+						<div class="col-xl-12">
+							<table>
+								<thead>
+									<tr>
+										<th> SELECT </th>	
+										<th (click)="sortByDeviceName()">
+											<div class="th-wrapper">
+												<span class="col-name">
+													DEVICE NAME	
+												</span>	
+												<span class="icon-triangle-down flex--centered"
+													[class.transform--flipped]="!sortAscend.deviceName"></span>
+											</div>	
+										</th>
+										<th (click)="sortByStoreName()">
+											<div class="th-wrapper">
+												<span class="col-name">
+													STORE NAME
+												</span>	
+												<span class="icon-triangle-down flex--centered"
+													[class.transform--flipped]="!sortAscend.storeName"></span>
+											</div>	
+										</th>
+										<th (click)="sortByStoreId()">
+											<div class="th-wrapper">
+												<span class="col-name">
+													STORE ID
+												</span>	
+												<span class="icon-triangle-down flex--centered"
+		  [class.transform--flipped]="!sortAscend.storeId"></span>
+											</div>	
+										</th>
+										<th> IP	</th>
+										<th (click)="sortByOS()">
+											<div class="th-wrapper">
+												<span class="col-name">
+													OS
+												</span>	
+												<span class="icon-triangle-down flex--centered"
+													[class.transform--flipped]="!sortAscend.os"></span>
+											</div>	
+										</th>
+										<th> DESCRIPTION </th>
+									</tr>	
+								</thead>	
+								<tbody>
+									<tr *ngFor="let device of displayedDevices; let i = index">
+										<td>
+											<div class="flex--centered">
+												<app-checkbox-control></app-checkbox-control>
+											</div>
+										</td>	
+										<td>
+											<div class="td-wrapper">
+												<span class="icon-router flex--centered" *ngIf="device.type === 'router'"></span>	
+												<span class="icon-pos flex--centered" *ngIf="device.type === 'pos'"></span>	
+												<span class="col-name">
+													{{ device.name }}		
+												</span>
+											</div>	
+										</td>
+										<td>
+											<div class="td-wrapper">
+												<span class="icon-status--active--shadow flex--centered"
+													*ngIf="device.status === 'active'"></span>	
+												<span class="icon-status--issue--shadow flex--centered"
+													*ngIf="device.status === 'issue'"></span>	
+												<span class="store-name">
+													{{ device.storeName }}	
+												</span>
+											</div>
+										</td>
+										<td>
+											{{ device.id }}	
+										</td>
+										<td>
+											{{ device.ip }}	
+										</td>
+										<td>
+											{{ device.os }}	
+										</td>
+										<td>
+											{{ device.description }}	
+										</td>
+									</tr>	
+								</tbody>
+							</table>	
+						</div>	
+					</div>	
+				</div><!-- table view -->
+			</div>
+
+			<div class="paginator-wrapper">
+				<app-paginator
+					[currentPage]="currentPage"
+					[numPages]="numPages"
+					(paged)="onNewPageSelected($event)"></app-paginator>	
+			</div>
+		</div><!-- primary content -->
+	</div><!-- primary content wrapper -->
+
+
+	<!-- ADD DEVICE FORM -->
+	<aside *ngIf="addDeviceFormVisible">
+		<add-device-form
+			(dismiss)="addDeviceFormVisible = false"></add-device-form>		
+	</aside>
+</div>

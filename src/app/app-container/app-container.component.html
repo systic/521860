@@ -1,0 +1,21 @@
+<div id="app-container"
+	[class.nav-menu--visible]="navMenuVisible">
+
+	<!-- NAVIGATION MENU ( mobile and tablet ) -->
+	<div class="nav-menu-wrapper">
+		<app-navigation-menu></app-navigation-menu>	
+	</div>
+
+	<!-- PRIMARY APPLICATION CONTENT -->
+	<div class="primary-content">
+			
+		 <app-header></app-header>
+
+		 <router-outlet></router-outlet>
+	</div>
+
+	<!-- PAGE FOOTER -->
+	<div class="footer-wrapper">
+		<app-footer></app-footer>
+	</div>
+</div>

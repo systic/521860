@@ -1,0 +1,59 @@
+@import '../../../../variables';
+
+.user-card {
+	display: flex;
+	align-items: flex-start;
+	padding-left: 37px;
+	padding-right: 33px;
+	padding-top: 22px;
+
+	.user-avatar-wrapper {
+		margin-right: 10px;
+		width: 61px;
+		height: 61px;
+		border-radius: 50%;
+		background-color: $background-color;
+	}
+
+	.user-card__primary {
+		flex-grow: 2;
+		
+		.user-name-and-type {
+			display: flex;
+			align-items: center;
+		}
+
+		.user-name {
+			font-size: 15px;
+			font-weight: normal;
+			color: #007ac8;
+			margin-left: 10px;
+			flex-grow: 2;
+			text-align: left;
+		}
+
+		.user-type {
+			font-size: 14px;
+			color: #575757;
+
+			&.text--green {
+				color: #00bf4c;
+			}
+		}
+
+		.user-email,
+	       	.user-id,
+		.user-phone {
+			font-size: 14px;
+		}
+
+		.user-phone {
+			display: flex;
+			align-items: center;
+			
+			.phone {
+				margin-left: 7px;
+			}
+		}
+	}
+}

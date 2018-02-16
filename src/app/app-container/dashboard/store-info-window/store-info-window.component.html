@@ -1,0 +1,59 @@
+<div class="store-info-window">
+
+	<!-- infowindow heading -->
+	<div class="info-window__heading">
+		<h4>
+			{{ store.name }}	
+		</h4>	
+
+		<span class="status-indicator"
+			[class.bg--red]="store.status === 'issue'"
+			[class.bg--light-blue]="store.status === 'active'"></span>
+	</div>
+
+	<!-- infowindow body -->
+	<div class="info-window__body">
+
+		<div class="pos-section">
+			<span class="pos-count">
+				{{ store.posAisles.count }}	
+			</span>	
+			<div class="pos-section__secondary">
+				<label>
+					POS AISLES	
+				</label>	
+				<span class="icon-card flex--centered"></span>
+			</div>
+		</div>	
+
+		<!-- Store Performance Section -->
+		<div class="store-performance-section">
+			<span class="store-performance">
+				{{ store.storePerformance.salesNum }}	
+			</span>	
+			<div class="store-performance__secondary">
+				<label>
+					Store Perform	
+				</label>	
+				<span>
+					$	
+				</span>
+			</div>
+		</div>
+
+		<!-- Network Performance Section -->
+		<div class="network-performance-section">
+			<span class="network-performance">
+				{{ store.networkPerformance.total }}	
+			</span>	
+			<div class="network-performance__secondary">
+				<label>
+					Store Perform	
+				</label>	
+				<span class="icon-network flex--centered">
+						
+				</span>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,48 @@
+.select-control {
+	position: relative;
+	width: 100%;
+
+	.select-control__primary {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-left: 16px;
+		padding-right: 16px;
+		background-color: #f7f7f7;
+		border: 1px solid #e9e9e9;
+		border-radius: 4px;
+		cursor: pointer;
+		width: 100%;
+		height: 38px;
+
+		.selected-option {
+			font-size: 13px;
+		}
+	}
+
+	.options {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		min-width: 100%;
+		background-color: #f7f7f7;
+		border: 1px solid #e9e9e9;
+		border-radius: 4px;
+		z-index: 5001;
+
+		.option {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			padding-left: 16px;
+			font-size: 13px;
+			height: 38px;
+
+			&:hover {
+				background-color: #eee;
+			}
+		}
+	}
+}

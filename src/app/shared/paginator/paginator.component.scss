@@ -1,0 +1,44 @@
+@import '../../../variables';
+
+.app-paginator {
+	display: flex;
+	align-items: center;
+
+	.btn-next {
+
+		span {
+			transform: rotateY(180deg);
+		}
+	}
+
+	.page-buttons {
+		display: flex;
+		align-items: center;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.page-button {
+		width: 23px;
+		height: 23px;
+		border-radius: 50%;
+
+		&:not(:last-of-type) {
+			margin-right: 4px;
+		}
+
+		&.page-button--active {
+			background-color: #007ac8;
+
+			span {
+				color: white;
+				font-weight: bold;
+			}
+		}
+		 
+		span {
+			color: $text-black;
+			font-size: 14px;
+
+		}
+	}
+}

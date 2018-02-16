@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import './breakpoints';
+@import './normalize';
+@import './assets/img/sprites/sprite.css';
+
+/**
+ * FLEXBOX
+ */
+
+.flex--centered {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/**
+ * BACKGROUND-COLORS
+ */
+
+.bg--light-blue {
+	background-color: $light-blue;
+}
+
+.bg--red {
+	background-color: $red;
+}
+
+/**
+ * TEXT COLORS
+ */
+
+.text--green {
+	color: #00bf4c;
+}
+
+/**
+ * TRANSFORM CLASSES
+ */
+
+.transform--flipped {
+	transform: rotateX(180deg);
+}
+
+/**
+ * SNAZZY INFO WINDOW CLASS OVERRIDES
+ */
+
+.si-frame {
+	padding: 16px 21px 26px;
+	border-radius: 4px;
+
+	display: none;
+
+	@include for-desktop-up {
+		display: initial;
+	}
+}
+.si-pointer-border-right,
+.si-pointer-bg-right,
+.si-close-button {
+	display: none;
+
+}

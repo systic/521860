@@ -1,0 +1,116 @@
+@import '../../../../variables';
+
+.device-card {
+	height: 160px;
+	border-top: 1px solid #dddee0;
+	display: flex;
+	align-items: center;
+	padding-left: 28px;
+	padding-right: 18px;
+
+
+	.card__primary {
+		flex-grow: 2;
+	}
+
+	.device-type-icon-wrapper {
+		width: 	110px;
+		height: 110px;
+		border-radius: 4px;
+		background-color: $background-color;
+		margin-right: 14px;
+	}
+
+	.device-name {
+		display: flex;
+		align-items: center;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #eee;
+
+		h5 {
+			font-size: 15.82px;
+			font-weight: bold;
+			margin-left: 10px;
+		}
+	}
+
+	.device-store {
+		display: flex;
+		align-items: center;
+		margin-top: 10px;
+		margin-bottom: 9px;
+
+		p {
+			margin-left: 10px;
+			color: #007ac8;
+			font-size: 15.06px;
+		}
+	}
+
+	.id-and-ip {
+		padding-left: 26px;
+		display: flex;
+		align-items: center;
+
+		span {
+			font-size: 14px;
+			opacity: 0.5;
+
+			&.device-id {
+				margin-right: 20px;
+			}
+		}
+
+		label {
+			font-size: 14px;
+			color: #9b9b9b;
+			opacity: 0.5;
+		}
+
+		.ip-wrapper {
+			height: 14px;
+			display: flex;
+			align-items: center;
+			padding-left: 11px;
+			border-left: 1px solid rgba(194, 196, 199, 0.5);
+		}
+	}
+
+	.os-and-type {
+		margin-top: 6px;
+		padding-left: 26px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-right: 9px;
+
+		.device-os {
+			display: flex;
+			align-items: center;
+
+			label,
+			.os {
+				font-size: 14px;
+			}
+
+			label {
+				color: rgba(155,155,155,0.5);
+			}
+
+			.os {
+				transform: translateX(3px);
+			}
+		}
+
+		.device-type {
+			display: flex;
+			align-items: center;
+
+			.type {
+				color: #0e1626;
+				margin-left: 8px;
+				font-size: 14px;
+			}
+		}
+	}
+}

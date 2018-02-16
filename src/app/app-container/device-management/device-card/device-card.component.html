@@ -1,0 +1,53 @@
+<div class="device-card">
+
+	<div class="device-type-icon-wrapper flex--centered">
+		<span class="icon-pos--large flex--centered" *ngIf="device.type === 'pos'"></span>		
+		<span class="icon-router--large flex--centered" *ngIf="device.type === 'router'"></span>		
+	</div>
+
+	<div class="card__primary">
+		<div class="device-name">
+			<app-checkbox-control></app-checkbox-control>
+			<h5>
+				{{ device.name }}	
+			</h5>	
+		</div>	
+		<div class="device-store">
+			<span class="icon-status--active--shadow" *ngIf="device.status === 'active'"></span>	
+			<span class="icon-status--issue--shadow" *ngIf="device.status === 'issue'"></span>	
+			<p>
+				{{ device.storeName }}	
+			</p>
+		</div>
+		<div class="id-and-ip">
+			<span class="device-id">
+				{{ device.id }}	
+			</span>	
+			<div class="ip-wrapper">
+				<label>
+					IP :	
+				</label>	
+				<span class="device-ip">
+					{{ device.ip }}	
+				</span>
+			</div>
+		</div>
+		<div class="os-and-type">
+			<div class="device-os">
+				<label>
+					OS :	
+				</label>	
+				<span class="os">
+					{{ device.os }}	
+				</span>
+			</div>	
+			<div class="device-type">
+				<span class="icon-pos flex--centered" *ngIf="device.type === 'pos'"></span>	
+				<span class="icon-router flex--centered" *ngIf="device.type === 'router'"></span>	
+				<label class="type">
+					{{ device.type | uppercase }}	
+				</label>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,181 @@
+@import '../../../../variables';
+@import '../../../../breakpoints';
+
+#device-summary-modal-container {
+	position: fixed;
+	z-index: 6000;
+
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	background-color: rgba(0,0,0,0);
+	transition: 0.25s ease-out;
+
+	overflow: scroll;
+
+	&.modal--visible {
+
+		background-color: rgba(0,0,0,0.75);
+
+		#device-summary-modal {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}
+
+#device-summary-modal-wrapper {
+	padding-top: 52px;
+	padding-bottom: 52px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow-y: scroll;
+	height: 100%;
+
+}
+
+#device-summary-modal {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	width: 88.53%;
+	background-color: white;
+	border-radius: 4px;
+	will-change: transform;
+	opacity: 0;
+	transform: translateY(25px);
+	transition: 0.25s ease-out;
+	padding: 27px 0 38px;
+
+	@include for-tablet-up {
+		padding-left: 25px;
+		padding-right: 25px;
+		max-width: 850px;
+	}
+
+	.btn-dismiss {
+		position: absolute;
+		top: 11px;
+		right: 11px;
+		width: 32px;
+		height: 32px;
+		border-radius: 4px;
+		background-color: $background-color;
+	}
+
+	h3 {
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 28px;
+		padding-left: 11px;
+	}
+
+	.paginator-wrapper {
+		margin-top: 15px;
+		padding-right: 10.5px;
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+table {
+	width: 100%;
+
+	&.table--mobile {
+		th:nth-child(1) {
+			width: 48%;
+			padding-left: 21px;
+		}
+
+		td:nth-child(1) {
+			padding-left: 11px;
+		}
+	}
+
+
+	thead {
+		tr {
+			background-color: #eaf0f4;
+			height: 34px;
+			border-top: 1px solid #e3e3e3;
+			border-bottom: 1px solid #e3e3e3;
+
+			th {
+				font-size: 14px;
+				font-weight: bold;
+				user-select: none;
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			height: 38px;
+
+			&:nth-child(odd) {
+				height: 53px;
+			}
+
+			&:nth-child(even) {
+				background-color: #f8f8f8;
+			}
+
+			td {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.mobile-tables {
+	@include for-tablet-up {
+		display: none;
+	}
+}
+
+.tablet-and-desktop-table {
+	display: none;
+
+	@include for-tablet-up {
+		display: block;
+
+		table {
+			th:nth-child(1) {
+				width: 33%;
+				padding-left: 21px;
+			}
+
+			td:nth-child(1) {
+				padding-left: 11px;
+			}
+		}
+	}
+}
+
+.icon-wrapper {
+	width: 31px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.td--health .icon-wrapper {
+	width: max-content;
+	margin-right: 10px;
+}
+
+.icon-triangle-down {
+	margin-left: 9px;
+}
+
+.td-wrapper,
+.th-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}

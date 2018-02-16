@@ -1,0 +1,46 @@
+@import '../../../variables';
+
+.checkbox-control {
+	width: max-content;
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	input {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		z-index: -1;
+
+		&:checked ~ .checkbox-indicator {
+			background-color: $light-blue;
+			border: 1px solid $light-blue;
+
+			.icon-checkmark {
+				opacity: 1;
+			}
+		}
+	}
+
+	.checkbox-indicator {
+		width: 15px;
+		height: 15px;
+		border: 1px solid #ebebeb;
+		border-radius: 2.5px;
+		margin-right: 9px;
+
+		.icon-checkmark {
+			opacity: 0;
+		}
+	}
+
+	.checkbox-label {
+		font-size: calc(24.05px / 2);
+		color: $text-black;
+		user-select: none;
+	}
+}

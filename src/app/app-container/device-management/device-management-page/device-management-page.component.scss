@@ -1,0 +1,234 @@
+@import '../../../../variables';
+
+#device-management-page {
+	background-color: $background-color;
+
+	.page-subheader {
+		display: flex;
+		align-items: center;
+		height: 64px;
+		background-color: $dark-blue;
+
+		.page-details {
+			color: white;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-left: 21px;
+			padding-right: 21px;
+			width: 50%;
+
+			h3 {
+				font-size: 18px;
+				font-weight: bold;
+			}
+
+			span {
+				font-size: 16px;
+			}
+		}
+
+		.search-input-wrapper {
+			position: relative;
+			width: 50%;
+			height: 64px;
+			border-left: 1px solid rgba(255,255,255,0.5);
+
+			input {
+				color: white;
+				width: 100%;
+				height: 100%;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			span {
+				position: absolute;
+				top: 23px;
+				right: 23px;
+			}
+		}
+	}	
+
+	/** 
+	 * 	PRIMARY CONTENT
+	 */
+
+	.primary-content-wrapper {
+		padding: 21px 21px 85px;
+		background-color: $background-color;
+	}
+
+	.primary-content {
+		background-color: white;
+		border-radius: 4px;
+		padding-bottom: 38px;
+
+		.table-heading {
+			height: 86px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-right: 38px;
+			padding-left: 36px;
+
+			h3 {
+				font-size: 18px;
+				font-weight: bold;
+			}
+
+			.table-actions {
+				display: flex;
+				align-items: center;
+
+				.btn-update,
+				.btn-deactivate {
+					height: 43px;
+					width: 171px;
+					border-radius: 4px;
+					background-color: $background-color;
+
+					.btn-text {
+						margin-left: 10px;
+						font-size: 16px;
+						font-weight: bold;
+					}
+				}
+
+				.btn-deactivate {
+					margin-left: 21px;
+					margin-right: 21px;
+				}
+
+				.btn-add-device {
+					width: 150px;
+					height: 43px;
+					border-radius: 4px;
+					background-color: $light-blue;
+					margin-right: 22px;
+
+					.btn-text {
+						color: white;
+						font-size: 16px;
+						font-weight: bold;
+						margin-left: 14px;
+					}
+				}
+
+				.table-layouts {
+					display: flex;
+					align-items: center;
+
+					.btn-grid-layout {
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+
+		/*
+		 * GRID VIEW
+		 */
+
+		.grid-view {
+
+			.device-card-wrapper {
+
+
+				&:nth-child(3n - 1) {
+					border-left: 1px solid #dddee0;
+					border-right: 1px solid #dddee0;
+				}
+
+			}
+		}
+
+		/**
+		 * TABLE VIEW 
+		 */
+
+		.table-view {
+
+			table {
+				width: 100%;
+
+				.th-wrapper,
+				.td-wrapper {
+					display: flex;
+					align-items: center;
+				}
+
+				.icon-triangle-down {
+					margin-left: 4px;
+				}
+
+				th,
+				td {
+					font-size: 14px;
+				}
+
+				th {
+					font-weight: bold;
+					user-select: none;
+
+					&:nth-child(1) {
+						text-align: center;
+					}
+
+					&:nth-child(1) { width: 6.25%; }
+					&:nth-child(2) { width: 16.56%; }
+					&:nth-child(3) { width: 15.7%; }
+					&:nth-child(4) { width: 12.4%; }
+					&:nth-child(5) { width: 12.4%; }
+					&:nth-child(6) { width: 10.9%; }
+
+					&:nth-child(2),
+					&:nth-child(3),
+					&:nth-child(4),
+					&:nth-child(6) {
+						cursor: pointer;
+					}
+				}
+
+				td {
+					.col-name,
+					.store-name {
+						margin-left: 8px;
+					}
+				}
+
+				thead tr {
+					background-color: #eaf0f4;
+					border-top: 1px solid #e3e3e3;
+					border-bottom: 1px solid #e3e3e3;
+					height: 34px;
+				}
+
+				tbody {
+					tr {
+						&:nth-child(even) {
+							height: 38px;
+							background-color: $background-color;
+						}
+
+						&:nth-child(odd) {
+							height: 54px;
+						}
+					}
+				}
+			}
+		}
+
+		/**
+		 * PAGINATOR
+		 */
+
+		.paginator-wrapper {
+			margin-top: 14px;
+			padding-right: 34px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+		}
+	}
+}
